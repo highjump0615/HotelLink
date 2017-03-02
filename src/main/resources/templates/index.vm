@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - HotelEverlink</title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="Jim Fernando" name="author">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/touch-icon-ipad-retina.png">
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="header">
+    <div class="header-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" title="HotelEverlink"><img src="images/logo.png" alt=""></a>
+            <!--
+            <div class="customer-support">
+                <h5>24/7 Customer Support</h5>
+                <p>US TOLL FREE +1-855-590-0680<br>CHINA OFFICE +86-400-1203012</p>
+            </div>
+            -->
+        </div>
+    </div>
+    <div class="header-nav">
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul id="nav" class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- Contents -->
+<div class="content">
+
+    <section class="section_hero hero_home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>WELCOME TO HOTELEVERLINK ONLINE SYSTEM</h1>
+                <h3>Strong Supply, Competitive Rate, Efficient Technology, Quality Experience</h3>
+                <p>We are a global distributor of accommodation and a professional solution to the world's travel trade.  <br>When you choose us, you choose simplicity at a click of a button.</p>
+                <hr class="break break10">
+                <a href="#" class="btn btn-purple arrow-circle-right">SIGNUP NOW</a>
+            </div>
+            <div class="form-signin">
+                <div class="form-signin-heading">SIGNIN NOW!!!</div>
+                <form method="post" action="">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" name="" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name=""> Stay signed in
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-action">
+                        <button type="submit" class="btn btn-block btn-purple">SIGNIN NOW!!!</button>
+                    </div>
+                    <p><a href="#">Having trouble signing in?</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--
+        <section class="space-lg">
+            <div class="container">
+                <article class="post">
+                    <div class="post-title">
+                        <h1 class="text-purple-dark">Welcome to Our Hotereverlink agencies</h1>
+                        <h3 class="text-purple-light">Provide Hotel Booking Service for Travel Agencies</h3>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of “de Finibus Bonorum et Malorum” (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, “Lorem ipsum dolor sit amet..”, comes from a line in section 1.10.32.</p>
+                    <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from “de Finibus Bonorum et Malorum” by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+                    <a href="#" class="btn btn-lg btn-purple-dark arrow-circle-right">SIGNUP NOW</a>
+                </article>
+            </div>
+        </section>
+    -->
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="container">
+        <div class="footer-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-rights">
+            Copyright &copy; 2016 <a href="#">www.hoteleverlink.com</a>. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.plugins.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
