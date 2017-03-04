@@ -48,9 +48,9 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul id="nav" class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="aboutus.html">About Us</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
+                        <li #if (${page} == "index") class="active" #end><a href="/">Home</a></li>
+                        <li #if (${page} == "about") class="active" #end><a href="/about">About Us</a></li>
+                        <li #if (${page} == "contact") class="active" #end><a href="/contact">Contact Us</a></li>
                     </ul>
                 </div>
             </nav>
