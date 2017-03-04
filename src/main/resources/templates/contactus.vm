@@ -1,0 +1,112 @@
+#parse("layout.vm")
+
+#@mainLayout()
+
+<section class="section_hero hero_brief" style="background-image:url(images/hero_contactus.jpg)">
+    <div class="container">
+        <div class="hero-content text-center">
+            <h1>HotelEverlink</h1>
+            <h3>Strong Supply, Competitive Rate, Efficient Technology, Quality Experience</h3>
+        </div>
+    </div>
+</section>
+
+<section class="space-lg">
+    <div class="container">
+
+        <div id="main-contents">
+            <div id="main">
+                <article class="post">
+                    <div class="post-title">
+                        <h1 class="text-purple-dark">Contact Us</h1>
+                        <h3 class="text-purple-light">EVER-LINK AB - Head Quarters</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="text-lg">Address:krysshammarvagen 14, 17157, Solna . Stockholm . Sweden<br>Mailbox:Box 20069, 16102, Bromma<br>Managing Director: Herik.d<br>Tel: 0046 733859168<br>Marketing & BD: info@hoteleverlink.com<br>Customer Care: service@hoteleverlink.com<br>IT & Support: IT@hoteleverlink.com<br>
+                            </p>
+                        </div>
+                        <!--
+                        <div class="col-md-6">
+                            <p class="text-lg">
+                                Managing Director: Herik.d<br>
+                                Tel: 0046 733859168
+                                Marketing & BD: info@hoteleverlink.com<br>
+                                Customer Care: service@hoteleverlink.com<br>
+                                IT & Support: IT@hoteleverlink.com<br>
+                            </p>
+                        </div>
+                        -->
+                    </div>
+                    <!--
+                    <hr class="double">
+                    <hr class="break break20">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="post-title">
+                                <h3>United States</h3>
+                            </div>
+                            <p class="text-lg">
+                                Lorum ipsum simply win Sheikh Lorum ipsum simply Boulevard, Lorum ipsum simply winP.O Box: 391822, New Zersy, United States.<br>
+                                Tel  :  +44 (0)20 3384 5410<br>
+                                Fax  : +44 (0)20 3479 5926<br>
+                                Accounts :  accounts@hoteleverlink.com<br>
+                                Customer Care :  reservations@hoteleverlink.com<br>
+                                General Enquiry :  marketing@hoteleverlink.com<br>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="post-title">
+                                <h3>Bangkok</h3>
+                            </div>
+                            <p class="text-lg">
+                                Lorum ipsum simply win Sheikh Lorum ipsum simply Boulevard, Lorum ipsum simply winP.O Box: 391822, New Zersy, United States.<br>
+                                Tel  :  +44 (0)20 3384 5410<br>
+                                Fax  : +44 (0)20 3479 5926<br>
+                                Accounts :  accounts@hoteleverlink.com<br>
+                                Customer Care :  reservations@hoteleverlink.com<br>
+                                General Enquiry :  marketing@hoteleverlink.com<br>
+                            </p>
+                        </div>
+                    </div>
+                    -->
+                </article>
+            </div>
+
+            <div id="side">
+                <div class="widget widget_signin">
+                    <div class="signin-heading">SIGNIN NOW!!!</div>
+                    <form method="post" action="">
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input type="text" class="form-control" name="" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" name="" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name=""> Stay signed in
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-action">
+                            <button type="submit" class="btn btn-block btn-purple">SIGNIN NOW!!!</button>
+                        </div>
+                        <p><a href="#">Having trouble signing in?</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--
+<section class="maps">
+    <div id="map_canvas"></div>
+</section>
+-->
+
+#end

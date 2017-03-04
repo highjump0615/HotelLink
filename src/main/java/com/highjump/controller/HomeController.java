@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 
 /**
- * Created by Administrator on 3/3/17.
+ * Controller for main home pages
  */
 @Controller
 public class HomeController {
@@ -24,5 +24,26 @@ public class HomeController {
         model.put("page", "about");
 
         return "aboutus";
+    }
+
+    @RequestMapping("/contact")
+    public String contact(Map<String, Object> model) {
+        model.put("page", "contact");
+
+        return "contactus";
+    }
+
+    @RequestMapping("/term")
+    public String term(Map<String, Object> model) {
+        model.put("page", "index");
+
+        return "term";
+    }
+
+    @RequestMapping("/privacy")
+    public String privact(Map<String, Object> model) {
+        model.put("page", "index");
+
+        return "privacy";
     }
 }

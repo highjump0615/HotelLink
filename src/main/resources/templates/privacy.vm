@@ -1,0 +1,43 @@
+#parse("layout.vm")
+
+#@mainLayout()
+
+<section class="page-heading">
+    <div class="container">
+        <h1>Privacy & Policy</h1>
+    </div>
+</section>
+
+<section class="space-sm">
+    <div class="container">
+
+        <div class="tabled">
+            <div class="tabled-heading">
+                <h4>EVER-LINK AB</h4>
+                <h1>Privacy & Policy</h1>
+            </div>
+            <div class="tabled-body">
+                <article class="post post-default">
+                    <h3 class="text-purple-dark mt0">This Agreement was last modified on March 12, 2014.</h3>
+                    <p>We highly value your trust in choosing Hoteleverlink for your online hotel reservation. We provide this privacy policy statethe information we collect and how we use that information. Hoteleverlink takes the privacy of your personal information very seriously and will use your information only in accordance with the terms of this Privacy Policy.
+                        By accepting the Privacy Policy and User Agreement in registration, you expressly consent to our use and disclosure of your personal information and direct us to do so in the manner described in this Privacy Policy above.</p>
+                    <p>By accessing or using the Site in any manner, including, but not limited to, visiting or browsing the Site or contributing content or other materials to the Site, you agree to be bound by these Terms of Service. Capitalized terms are defined in this Agreement.</p>
+                    <h4 class="text-purple-dark">Information collection from you</h4>
+                    <p>When you purchase product of this site, we will need to collect your information in order to complete yourbooking process and save for disclosures required by law, criminal investigations, subpoenas or court orders. This information may include such details as name, address, email address, telephone number and credit card details to the relevant hotel with which a booking is made.
+                        However, please note that from time to time,wemay use third party distributors which provide certain services and functions for and on our behalf.These third party distributors may have access to personal information in order to perform their services and functions, but are subject to a confidentiality obligation pursuant to which they cannot use, share or disclose the information for any other purpose.
+                        We take full responsibility for ensuring that proper security measures are in place to protect your information. The information may also be provided to security or credit checking companies, public authorities, criminal investigations, or court orders as required by law.</p>
+                    <h4 class="text-purple-dark">Information about surveys</h4>
+                    <p>We may use details of your visits to our Site and of the particular sections or materials on our Site that you access, including, but not limited to, traffic data, location data, weblogs and other communication data. This information does not identify any individual visitor and we collect it in order to monitor statistics of visitors to our Site and particular sections visitors and to ensure that content from our Site is presented in the most effective manner for you and for your computer.
+                        We may also ask you to complete surveys that we use for research and statistics purposes. Again provision of such information is voluntary, and you do not have to respond to our surveys.
+                    </p>
+                    <h4 class="text-purple-dark">Information control</h4>
+                    <p>You always have the right to review the personal data you have stored with us. You can request your personal data by emailing us. If your personal data is incorrect, we will change it upon your request. You can also ask Hoteleverlink to remove your personal data from its database by sending us an email.</p>
+                    <p>Our Privacy Policy is reviewed regularly to ensure that it reflects how we use your information. Any changes will be notified to you by updating this policy.If you disagree with the terms of the Privacy Policy, please do not sign up and do not use the Hoteleverlink services.</p>
+                </article>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+#end

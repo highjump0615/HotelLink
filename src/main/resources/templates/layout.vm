@@ -30,13 +30,11 @@
 <div class="header">
     <div class="header-top">
         <div class="container">
-            <a class="navbar-brand" href="#" title="HotelEverlink"><img src="images/logo.png" alt=""></a>
-            <!--
+            <a class="navbar-brand" href="/" title="HotelEverlink"><img src="images/logo.png" alt=""></a>
             <div class="customer-support">
                 <h5>24/7 Customer Support</h5>
                 <p>US TOLL FREE +1-855-590-0680<br>CHINA OFFICE +86-400-1203012</p>
             </div>
-            -->
         </div>
     </div>
     <div class="header-nav">
@@ -70,11 +68,11 @@
     <div class="container">
         <div class="footer-menu">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="terms.html">Terms and Conditions</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/term">Terms and Conditions</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
             </ul>
         </div>
         <div class="footer-rights">
