@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 /**
@@ -13,10 +14,10 @@ import java.util.Map;
 public class HomeController {
 
     @RequestMapping("/")
-    public String index(Map<String, Object> model) {
+    public String index(HttpSession session, Map<String, Object> model) {
         model.put("page", "index");
 
-        return "index";
+        return "home";
     }
 
     @RequestMapping("/about")

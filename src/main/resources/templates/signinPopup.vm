@@ -17,5 +17,5 @@
     <div class="form-action">
         <button type="submit" class="btn btn-block btn-purple">SIGNIN NOW!!!</button>
     </div>
-    <p><a href="#">Having trouble signing in?</a></p>
+    <p><a href="/contact">Having trouble signing in?</a></p>
 </form>

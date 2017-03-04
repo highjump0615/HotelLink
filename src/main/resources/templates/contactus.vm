@@ -1,4 +1,4 @@
-#parse("layout.vm")
+#parse("layout/layout.vm")
 
 #@mainLayout()
 

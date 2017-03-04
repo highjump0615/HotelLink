@@ -1,0 +1,173 @@
+#parse("layout/layout_login.vm")
+
+#@mainLayout()
+
+<section class="section_hero hero_home_search">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Welcome to Our Hotereverlink agencies</h1>
+            <h3>Provide Hotel Booking Service for Travel Agencies</h3>
+            <div class="form-search">
+                <form method="post" action="">
+                    <div class="row gutter7">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="destination">Where do you want to go?</label>
+                                <div class="has-icon">
+                                    <span class="icon-pushpin"></span>
+                                    <input type="text" class="form-control" name="" placeholder="City or Destinations">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Nationality</label>
+                                <div class="dropdown dropdown-lang has-selector">
+                                    <span class="lang-en lang-active"></span>
+                                    <input type="text" class="form-control dropdown-toggle" name="" placeholder="United Kingdom" data-toggle="dropdown">
+                                    <div class="dropdown-menu">
+                                        <ul>
+                                            <li class="lang-en active">English</li>
+                                            <li class="lang-gr">Germany</li>
+                                            <li class="lang-fr">French</li>
+                                            <li class="lang-sp">Spanich</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gutter7">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label>Checkin</label>
+                                <div class="has-icon">
+                                    <span class="icon-calendar"></span>
+                                    <input type="text" class="form-control" id="dateCheckin" name="" placeholder="dd/mm/yy">
+                                    <div class="calendardaten"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label>Checkout</label>
+                                <div class="has-icon">
+                                    <span class="icon-calendar"></span>
+                                    <input type="text" class="form-control" id="dateCheckout" name="" placeholder="dd/mm/yy">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label>Room, Adults (18+), Children (0-12)</label>
+                                <div class="dropdown dropdown-room has-selector">
+                                    <span class="lang-en lang-active"></span>
+                                    <a href="#" class="form-control dropdown-toggle">2 Rooms, 2 Adults, 2 Children</a>
+                                    <div class="dropdown-menu">
+                                        <div class="form-group-qty clearfix">
+                                            <label>Room</label>
+                                            <div id="controlQty" class="input-group">
+                                                <div class="input-group-btn">
+                                                    <button type="button" class="btn btn-min"></button>
+                                                </div>
+                                                <input type="text" class="form-control" value="1">
+                                                <div class="input-group-btn">
+                                                    <button type="button" class="btn btn-plus"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="form-group-room">
+                                            <li>
+                                                <div class="form-group-room-title">ROOM 1</div>
+                                                <div class="form-group">
+                                                    <label>Room Type</label>
+                                                    <select class="selector" style="width:100%;">
+                                                        <option value="">Single</option>
+                                                        <option value="">Double</option>
+                                                    </select>
+                                                </div>
+                                                <div class="row gutter5">
+                                                    <div class="col-sm-4">
+                                                        <div class="form-group">
+                                                            <label>Adults (+18)</label>
+                                                            <select class="selector" style="width:100%;">
+                                                                <option value="">1</option>
+                                                                <option value="" selected>2</option>
+                                                                <option value="">3</option>
+                                                                <option value="">...</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="form-group">
+                                                            <label>Children (0-17)</label>
+                                                            <select class="selector" style="width:100%;">
+                                                                <option value="" selected>1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                                <option value="">...</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row gutter5">
+                                                    <div class="col-sm-4">
+                                                        <div class="form-group">
+                                                            <label>Child 1 Age</label>
+                                                            <select class="selector" style="width:100%;">
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                                <option value="">4</option>
+                                                                <option value="">5</option>
+                                                                <option value="" selected>6</option>
+                                                                <option value="">...</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="form-group">
+                                                            <label>Child 1 Age</label>
+                                                            <select class="selector" style="width:100%;">
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                                <option value="">4</option>
+                                                                <option value="">5</option>
+                                                                <option value="" selected>6</option>
+                                                                <option value="">...</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="form-group">
+                                                            <label>Child 1 Age</label>
+                                                            <select class="selector" style="width:100%;">
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                                <option value="">4</option>
+                                                                <option value="">5</option>
+                                                                <option value="" selected>6</option>
+                                                                <option value="">...</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="btn btn-block btn-purple arrow-right">FIND HOTELS</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+#end
