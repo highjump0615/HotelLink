@@ -1,9 +1,8 @@
 
+// inherits Country
 var Nationality = function (id, countryId, countryName, nationality) {
-    BaseObject.call(this, id);
+    Country.call(this, id, countryId, countryName);
 
-    this.countryId = countryId;
-    this.countryName = countryName;
     this.nationality = nationality;
 };
 

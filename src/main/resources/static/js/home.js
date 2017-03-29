@@ -2,15 +2,72 @@
  * home page
  */
 
-var objAjax;
+/**
+ * Key up on city field
+ */
+$('input[name="city"]').keyup(function () {
+    var strKeyword = $(this).val();
+    var menuDropdown = $(this).next();
+
+    var aryDestination = [];
+
+    if (strKeyword.length <= 0) {
+        menuDropdown.hide();
+        return;
+    }
+
+    //
+    // query destination data
+    //
+    $.ajax({
+        type: "GET",
+        url: API_URL + 'suggestion/destination?key=' + strKeyword,
+        dataType: 'json',
+        crossDomain: true,
+        success: function (data) {
+            var domMenu = $('#destination-menu');
+
+            // clear list & array first
+            aryDestination.slice(0, aryDestination.length);
+            domMenu.empty();
+
+            for (var i = 0; i < data.length; i++) {
+                var dn = data[i];
+
+                // add to array
+                var destination = Destination.fromObject(dn);
+                aryDestination.push(destination);
+
+                // add to list
+                var strLi = '<li>' + destination.cityName + ', ' + destination.countryName + '</li>';
+                domMenu.append(strLi);
+            }
+
+            menuDropdown.show();
+        },
+        error: function (data) {
+            console.log(data);
+        }
+    });
+});
 
 /**
  * Key up on nationality field
  */
 $('input[name="nationality"]').keyup(function () {
     var strKeyword = $(this).val();
+    var menuDropdown = $(this).next();
+
+    if (strKeyword.length <= 0) {
+        menuDropdown.hide();
+        return;
+    }
+
     var aryNationality = [];
 
+    //
+    // query nationality data
+    //
     $.ajax({
         type: "GET",
         url: API_URL + 'suggestion/nationality?key=' + strKeyword,
@@ -34,6 +91,8 @@ $('input[name="nationality"]').keyup(function () {
                 var strLi = '<li>' + nationality.countryName + '</li>';
                 objNationMenu.append(strLi);
             }
+
+            menuDropdown.show();
         },
         error: function (data) {
             console.log(data);
@@ -80,3 +139,8 @@ function customRange(dates) {
         $('#dateCheckin').datepick('option', 'maxDate', dates[0] || null);
     }
 }
+
+$('body').on('click', function (e) {
+    // close all dropdown menus
+    $('.dropdown-menu').hide();
+});

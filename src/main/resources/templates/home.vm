@@ -13,9 +13,14 @@
                         <div class="col-md-8">
                             <div class="form-group">
                                 <label for="destination">Where do you want to go?</label>
-                                <div class="has-icon">
+                                <div class="dropdown dropdown-lang has-icon">
                                     <span class="icon-pushpin"></span>
-                                    <input type="text" class="form-control" name="" placeholder="City or Destinations">
+                                    <input type="text" class="form-control" name="city" placeholder="City or Destinations">
+                                    <!-- City dropdown menu -->
+                                    <div class="dropdown-menu">
+                                        <ul id="destination-menu">
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -24,13 +29,10 @@
                                 <label>Nationality</label>
                                 <div class="dropdown dropdown-lang has-selector">
                                     <span class="lang-en lang-active"></span>
-                                    <input type="text" class="form-control dropdown-toggle" name="nationality" placeholder="United Kingdom" data-toggle="dropdown">
+                                    <input type="text" class="form-control dropdown-toggle" name="nationality" placeholder="United Kingdom">
+                                    <!-- Nationality dropdown menu -->
                                     <div class="dropdown-menu">
                                         <ul id="nationality-menu">
-                                            <li class="lang-en active">English</li>
-                                            <li class="lang-gr">Germany</li>
-                                            <li class="lang-fr">French</li>
-                                            <li class="lang-sp">Spanich</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -174,6 +176,8 @@
 
 #@scriptLayout()
 <script src="js/object/BaseObject.js"></script>
+<script src="js/object/Country.js"></script>
 <script src="js/object/Nationality.js"></script>
+<script src="js/object/Destination.js"></script>
 <script src="js/home.js"></script>
 #end
