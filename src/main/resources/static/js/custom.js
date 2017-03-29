@@ -1,7 +1,3 @@
-// On-load scripts
-$(window).load(function(){
-
-});
 
 // Mouseup handle
 jQuery(document).mouseup(function(e){

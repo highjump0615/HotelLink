@@ -24,9 +24,9 @@
                                 <label>Nationality</label>
                                 <div class="dropdown dropdown-lang has-selector">
                                     <span class="lang-en lang-active"></span>
-                                    <input type="text" class="form-control dropdown-toggle" name="" placeholder="United Kingdom" data-toggle="dropdown">
+                                    <input type="text" class="form-control dropdown-toggle" name="nationality" placeholder="United Kingdom" data-toggle="dropdown">
                                     <div class="dropdown-menu">
-                                        <ul>
+                                        <ul id="nationality-menu">
                                             <li class="lang-en active">English</li>
                                             <li class="lang-gr">Germany</li>
                                             <li class="lang-fr">French</li>
@@ -170,4 +170,10 @@
     </div>
 </section>
 
+#end
+
+#@scriptLayout()
+<script src="js/object/BaseObject.js"></script>
+<script src="js/object/Nationality.js"></script>
+<script src="js/home.js"></script>
 #end
