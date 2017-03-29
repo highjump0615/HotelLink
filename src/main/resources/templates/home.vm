@@ -43,7 +43,7 @@
                                 <label>Checkin</label>
                                 <div class="has-icon">
                                     <span class="icon-calendar"></span>
-                                    <input type="text" class="form-control" id="dateCheckin" name="" placeholder="dd/mm/yy">
+                                    <input type="text" class="form-control datepicker" id="dateCheckin" name="" placeholder="dd/mm/yy">
                                     <div class="calendardaten"></div>
                                 </div>
                             </div>
@@ -53,7 +53,7 @@
                                 <label>Checkout</label>
                                 <div class="has-icon">
                                     <span class="icon-calendar"></span>
-                                    <input type="text" class="form-control" id="dateCheckout" name="" placeholder="dd/mm/yy">
+                                    <input type="text" class="form-control datepicker" id="dateCheckout" name="" placeholder="dd/mm/yy">
                                 </div>
                             </div>
                         </div>

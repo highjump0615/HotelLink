@@ -40,3 +40,43 @@ $('input[name="nationality"]').keyup(function () {
         }
     });
 });
+
+
+$(document).ready(function(){
+
+    'use strict';
+
+    /**
+     * Initialize Date picker
+     */
+    var objDatePicker = $('.datepicker');
+
+    objDatePicker.on('focus',function(){
+        $(this).closest('.has-icon').addClass('dropdown-open');
+        $('.dropdown-room').removeClass('open');
+    });
+
+    objDatePicker.datepick({
+        alignment: 'top',
+        onSelect: customRange,
+        minDate: $.datepick.today(),
+        monthsToShow: 2,
+        changeMonth: false,
+        popupContainer: '.calendardaten',
+        nextText: '',
+        prevText: '',
+        showAnim: '',
+        onClose: function() {
+            $('.has-icon').removeClass('dropdown-open');
+        }
+    });
+
+});
+
+function customRange(dates) {
+    if (this.id == 'dateCheckin') {
+        $('#dateCheckout').datepick('option', 'minDate', dates[0] || null);
+    } else {
+        $('#dateCheckin').datepick('option', 'maxDate', dates[0] || null);
+    }
+}
