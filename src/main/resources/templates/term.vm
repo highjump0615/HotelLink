@@ -1,3 +1,5 @@
+#set ($title = "Terms and Conditions")
+
 #parse("layout/layout.vm")
 
 #@mainLayout()

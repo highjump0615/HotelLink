@@ -1,3 +1,5 @@
+#set ($title = "Contactus")
+
 #parse("layout/layout.vm")
 
 #@mainLayout()

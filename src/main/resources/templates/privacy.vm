@@ -1,3 +1,5 @@
+#set ($title = "Privacy")
+
 #parse("layout/layout.vm")
 
 #@mainLayout()

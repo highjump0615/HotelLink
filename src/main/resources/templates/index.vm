@@ -1,3 +1,5 @@
+#set ($title = "Homepage")
+
 #parse("layout/layout.vm")
 
 #@mainLayout()

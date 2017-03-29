@@ -2,6 +2,9 @@
  * home page
  */
 
+var gdomDestinationMenu;
+var gdomNationalityMenu;
+
 /**
  * Key up on city field
  */
@@ -25,11 +28,9 @@ $('input[name="city"]').keyup(function () {
         dataType: 'json',
         crossDomain: true,
         success: function (data) {
-            var domMenu = $('#destination-menu');
-
             // clear list & array first
             aryDestination.slice(0, aryDestination.length);
-            domMenu.empty();
+            gdomDestinationMenu.empty();
 
             for (var i = 0; i < data.length; i++) {
                 var dn = data[i];
@@ -40,7 +41,7 @@ $('input[name="city"]').keyup(function () {
 
                 // add to list
                 var strLi = '<li>' + destination.cityName + ', ' + destination.countryName + '</li>';
-                domMenu.append(strLi);
+                gdomDestinationMenu.append(strLi);
             }
 
             menuDropdown.show();
@@ -74,11 +75,9 @@ $('input[name="nationality"]').keyup(function () {
         dataType: 'json',
         crossDomain: true,
         success: function (data) {
-            var objNationMenu = $('#nationality-menu');
-
             // clear list & array first
             aryNationality.slice(0, aryNationality.length);
-            objNationMenu.empty();
+            gdomNationalityMenu.empty();
 
             for (var i = 0; i < data.length; i++) {
                 var dn = data[i];
@@ -89,7 +88,7 @@ $('input[name="nationality"]').keyup(function () {
 
                 // add to list
                 var strLi = '<li>' + nationality.countryName + '</li>';
-                objNationMenu.append(strLi);
+                gdomNationalityMenu.append(strLi);
             }
 
             menuDropdown.show();
@@ -104,6 +103,10 @@ $('input[name="nationality"]').keyup(function () {
 $(document).ready(function(){
 
     'use strict';
+
+    // init
+    gdomDestinationMenu = $('#destination-menu');
+    gdomNationalityMenu = $('#nationality-menu');
 
     /**
      * Initialize Date picker
@@ -141,6 +144,14 @@ function customRange(dates) {
 }
 
 $('body').on('click', function (e) {
-    // close all dropdown menus
-    $('.dropdown-menu').hide();
+    // close dropdown menus
+    hideDropdown();
 });
+
+/**
+ * hides Destination & Nationality Dropdown menus
+ */
+function hideDropdown() {
+    gdomDestinationMenu.parent().hide();
+    gdomNationalityMenu.parent().hide();
+}
