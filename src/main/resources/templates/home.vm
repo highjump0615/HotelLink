@@ -10,15 +10,15 @@
             <h1>Welcome to Our Hotereverlink agencies</h1>
             <h3>Provide Hotel Booking Service for Travel Agencies</h3>
             <div class="form-search">
-                <form method="post" action="">
+                <form id="findhotel-form" method="post" action="">
                     <div class="row gutter7">
                         <div class="col-md-8">
                             <div class="form-group">
                                 <label for="destination">Where do you want to go?</label>
                                 <div class="dropdown dropdown-lang has-icon">
                                     <span class="icon-pushpin"></span>
-                                    <input type="text" class="form-control" name="city" placeholder="City or Destinations">
-                                    <!-- City dropdown menu -->
+                                    <input type="text" class="form-control" name="destination" placeholder="City or Destinations" required>
+                                    <!-- Destination dropdown menu -->
                                     <div class="dropdown-menu">
                                         <ul id="destination-menu">
                                         </ul>
@@ -31,7 +31,7 @@
                                 <label>Nationality</label>
                                 <div class="dropdown dropdown-lang has-selector">
                                     <span class="lang-en lang-active"></span>
-                                    <input type="text" class="form-control dropdown-toggle" name="nationality" placeholder="United Kingdom">
+                                    <input type="text" class="form-control dropdown-toggle" name="nationality" placeholder="United Kingdom" required>
                                     <!-- Nationality dropdown menu -->
                                     <div class="dropdown-menu">
                                         <ul id="nationality-menu">
@@ -47,7 +47,7 @@
                                 <label>Checkin</label>
                                 <div class="has-icon">
                                     <span class="icon-calendar"></span>
-                                    <input type="text" class="form-control datepicker" id="dateCheckin" name="" placeholder="dd/mm/yy">
+                                    <input type="text" class="form-control datepicker" id="dateCheckin" name="" placeholder="dd/mm/yy" required>
                                     <div class="calendardaten"></div>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@
                                 <label>Checkout</label>
                                 <div class="has-icon">
                                     <span class="icon-calendar"></span>
-                                    <input type="text" class="form-control datepicker" id="dateCheckout" name="" placeholder="dd/mm/yy">
+                                    <input type="text" class="form-control datepicker" id="dateCheckout" name="" placeholder="dd/mm/yy" required>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                                 <label>Room, Adults (18+), Children (0-12)</label>
                                 <div class="dropdown dropdown-room has-selector">
                                     <span class="lang-en lang-active"></span>
-                                    <a href="#" class="form-control dropdown-toggle">2 Rooms, 2 Adults, 2 Children</a>
+                                    <a href="#" id="roominfo-a" class="form-control dropdown-toggle">2 Rooms, 2 Adults, 2 Children</a>
                                     <div class="dropdown-menu">
                                         <div class="form-group-qty clearfix">
                                             <label>Room</label>
@@ -74,7 +74,7 @@
                                                 <div class="input-group-btn">
                                                     <button type="button" class="btn btn-min"></button>
                                                 </div>
-                                                <input type="text" class="form-control" value="1">
+                                                <input type="text" class="form-control" name="roomcount" value="1">
                                                 <div class="input-group-btn">
                                                     <button type="button" class="btn btn-plus"></button>
                                                 </div>
@@ -94,69 +94,28 @@
                                                     <div class="col-sm-4">
                                                         <div class="form-group">
                                                             <label>Adults (+18)</label>
-                                                            <select class="selector" style="width:100%;">
-                                                                <option value="">1</option>
-                                                                <option value="" selected>2</option>
-                                                                <option value="">3</option>
-                                                                <option value="">...</option>
+                                                            <select class="selector" id="adultcount-select" style="width:100%;">
+                                                                <option value="1">1</option>
+                                                                <option value="2" selected>2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="0">...</option>
                                                             </select>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-4">
                                                         <div class="form-group">
                                                             <label>Children (0-17)</label>
-                                                            <select class="selector" style="width:100%;">
-                                                                <option value="" selected>1</option>
-                                                                <option value="">2</option>
-                                                                <option value="">3</option>
-                                                                <option value="">...</option>
+                                                            <select class="selector" id="childcount-select" style="width:100%;">
+                                                                <option value="1" selected>1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="0">...</option>
                                                             </select>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row gutter5">
-                                                    <div class="col-sm-4">
-                                                        <div class="form-group">
-                                                            <label>Child 1 Age</label>
-                                                            <select class="selector" style="width:100%;">
-                                                                <option value="">1</option>
-                                                                <option value="">2</option>
-                                                                <option value="">3</option>
-                                                                <option value="">4</option>
-                                                                <option value="">5</option>
-                                                                <option value="" selected>6</option>
-                                                                <option value="">...</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-4">
-                                                        <div class="form-group">
-                                                            <label>Child 1 Age</label>
-                                                            <select class="selector" style="width:100%;">
-                                                                <option value="">1</option>
-                                                                <option value="">2</option>
-                                                                <option value="">3</option>
-                                                                <option value="">4</option>
-                                                                <option value="">5</option>
-                                                                <option value="" selected>6</option>
-                                                                <option value="">...</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-4">
-                                                        <div class="form-group">
-                                                            <label>Child 1 Age</label>
-                                                            <select class="selector" style="width:100%;">
-                                                                <option value="">1</option>
-                                                                <option value="">2</option>
-                                                                <option value="">3</option>
-                                                                <option value="">4</option>
-                                                                <option value="">5</option>
-                                                                <option value="" selected>6</option>
-                                                                <option value="">...</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
+                                                <!-- Chile age select row -->
+                                                <div class="row gutter5" id="childrow-div">
                                                 </div>
                                             </li>
                                         </ul>

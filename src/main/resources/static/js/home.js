@@ -4,11 +4,14 @@
 
 var gdomDestinationMenu;
 var gdomNationalityMenu;
+var gnRoomCount = 1;
+var gnAdultCount = 2;
+var gnChildCount = 1;
 
 /**
  * Key up on city field
  */
-$('input[name="city"]').keyup(function () {
+$('input[name="destination"]').keyup(function () {
     var strKeyword = $(this).val();
     var menuDropdown = $(this).next();
 
@@ -99,6 +102,42 @@ $('input[name="nationality"]').keyup(function () {
     });
 });
 
+/**
+ * Update room, adult, child counts
+ */
+function updateRoomInfo() {
+    var strValue = gnRoomCount + ' Rooms, ' + gnAdultCount + ' Adults, ' + gnChildCount + ' Children';
+    $('#roominfo-a').html(strValue);
+}
+
+/**
+ * add/remove child age select
+ */
+function updateChildRow() {
+    var domChild = $('#childrow-div');
+
+    // remove all first
+    domChild.empty();
+
+    for (var i = 0; i < gnChildCount; i++) {
+        var strSelect = '<div class="col-sm-4"><div class="form-group">' +
+            '<label>Child ' + (i + 1) + ' Age</label>' +
+            '<select class="selector" style="width:100%;">' +
+            '   <option value="1">1</option>' +
+            '   <option value="2">2</option>' +
+            '   <option value="3">3</option>' +
+            '   <option value="4">4</option>' +
+            '   <option value="5">5</option>' +
+            '   <option value="6" selected>6</option>' +
+            '   <option value="0">...</option>' +
+            '</select>' +
+            '</div></div>';
+
+        domChild.append(strSelect);
+    }
+
+    initSelect2();
+}
 
 $(document).ready(function(){
 
@@ -106,7 +145,22 @@ $(document).ready(function(){
 
     // init
     gdomDestinationMenu = $('#destination-menu');
+    gdomDestinationMenu.on('click', 'li', function () {
+        // Set selected destination
+        $('input[name="destination"]').val($(this).html());
+    });
+
     gdomNationalityMenu = $('#nationality-menu');
+    gdomNationalityMenu.on('click', 'li', function () {
+        // Set selected nationality
+        $('input[name="nationality"]').val($(this).html());
+    });
+
+    // room info
+    updateRoomInfo();
+
+    // child select
+    updateChildRow();
 
     /**
      * Initialize Date picker
@@ -133,6 +187,24 @@ $(document).ready(function(){
         }
     });
 
+    /**
+     * ROOM, ADULTS, CHILDREN form
+     */
+    $('#controlQty button').on('click',function() {
+        var _this = $('#controlQty'),
+            _butt = $(this),
+            qty = _this.find('input').val();
+        if (_butt.hasClass('btn-plus')) {
+            var qtys = parseInt(qty)+1;
+            _this.find('input').val(qtys).change();
+        } else {
+            if (qty > 1) {
+                var qtys = parseInt(qty)-1;
+                _this.find('input').val(qtys).change();
+            }
+        }
+        return false;
+    });
 });
 
 function customRange(dates) {
@@ -155,3 +227,37 @@ function hideDropdown() {
     gdomDestinationMenu.parent().hide();
     gdomNationalityMenu.parent().hide();
 }
+
+/**
+ * changing room count
+ */
+$('input[name="roomcount"]').on('change', function () {
+    gnRoomCount = parseInt($(this).val());
+    updateRoomInfo();
+});
+
+/**
+ * changing adult count
+ */
+$('#adultcount-select').on('change', function () {
+    gnAdultCount = parseInt($(this).val());
+    updateRoomInfo();
+});
+
+/**
+ * changing child count
+ */
+$('#childcount-select').on('change', function () {
+    gnChildCount = parseInt($(this).val());
+    updateRoomInfo();
+    updateChildRow();
+});
+
+/**
+ * form submit
+ */
+$('#findhotel-form').submit(function () {
+
+    // prevent default action
+    return false;
+});
