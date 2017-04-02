@@ -1,0 +1,7 @@
+<div class="form-group">
+    <label>Checkout</label>
+    <div class="has-icon">
+        <span class="icon-calendar"></span>
+        <input type="text" class="form-control datepicker" id="dateCheckout" name="" placeholder="dd/mm/yy" required>
+    </div>
+</div>

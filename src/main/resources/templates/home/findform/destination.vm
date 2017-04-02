@@ -1,0 +1,12 @@
+<div class="form-group">
+    <label for="destination">$formlabel</label>
+    <div class="dropdown dropdown-lang has-icon">
+        <span class="icon-pushpin"></span>
+        <input type="text" class="form-control" name="destination" placeholder="City or Destinations" required>
+        <!-- Destination dropdown menu -->
+        <div class="dropdown-menu">
+            <ul id="destination-menu">
+            </ul>
+        </div>
+    </div>
+</div>

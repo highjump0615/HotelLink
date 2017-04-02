@@ -366,7 +366,6 @@ textarea.form-control{height:auto;}
 
 .form-search{padding:28px 18px 18px;background:rgba(35,11,62,0.85);border:3px solid rgba(202,43,255,0.45);}
 .form-search label{margin:0;padding:10px 0 0;height:32px;color:#fff;font-size:14px;font-weight:800;text-transform:uppercase;line-height:1;}
-.form-search label[for="destination"]{padding:0;font-family:"Arial",sans-serif;font-size:25px;text-transform:none;}
 .form-search .form-control{font-family:"Arial",sans-serif;font-size:16px;font-weight:400;border-color:#fff;box-shadow:0 0 5px rgba(150,144,154,0.75);}
 .form-search .btn[type=submit]{margin-top:32px;}
 .form-search .btn.arrow-right::after{right:38px;}

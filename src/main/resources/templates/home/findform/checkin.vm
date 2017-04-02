@@ -1,0 +1,8 @@
+<div class="form-group">
+    <label>Checkin</label>
+    <div class="has-icon">
+        <span class="icon-calendar"></span>
+        <input type="text" class="form-control datepicker" id="dateCheckin" name="" placeholder="dd/mm/yy" required>
+        <div class="calendardaten"></div>
+    </div>
+</div>

@@ -5,7 +5,8 @@
 #@styleLayout()
 <!-- css style -->
 
-<link href="css/home.css" rel="stylesheet" type="text/css">
+<link href="css/page/homefind.css" rel="stylesheet" type="text/css">
+<link href="css/page/home.css" rel="stylesheet" type="text/css">
 <link href="plugin/flag/css/flag-icon.min.css" rel="stylesheet" type="text/css">
 
 #end
@@ -23,115 +24,27 @@
                 <form id="findhotel-form" method="post" action="">
                     <div class="row gutter7">
                         <div class="col-md-8">
-                            <div class="form-group">
-                                <label for="destination">Where do you want to go?</label>
-                                <div class="dropdown dropdown-lang has-icon">
-                                    <span class="icon-pushpin"></span>
-                                    <input type="text" class="form-control" name="destination" placeholder="City or Destinations" required>
-                                    <!-- Destination dropdown menu -->
-                                    <div class="dropdown-menu">
-                                        <ul id="destination-menu">
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            <!-- destination form -->
+                            #set ($formlabel = "Where do you want to go?")
+                            #parse("home/findform/destination.vm")
                         </div>
                         <div class="col-md-4">
-                            <div class="form-group">
-                                <label>Nationality</label>
-                                <div class="dropdown dropdown-lang has-selector">
-                                    <span class="lang-en lang-active flag-icon flag-icon-cn"></span>
-                                    <input type="text" class="form-control dropdown-toggle" name="nationality" placeholder="China" required>
-                                    <!-- Nationality dropdown menu -->
-                                    <div class="dropdown-menu">
-                                        <ul id="nationality-menu">
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            <!-- nationality form -->
+                            #parse("home/findform/nationality.vm")
                         </div>
                     </div>
                     <div class="row gutter7">
                         <div class="col-md-2">
-                            <div class="form-group">
-                                <label>Checkin</label>
-                                <div class="has-icon">
-                                    <span class="icon-calendar"></span>
-                                    <input type="text" class="form-control datepicker" id="dateCheckin" name="" placeholder="dd/mm/yy" required>
-                                    <div class="calendardaten"></div>
-                                </div>
-                            </div>
+                            <!-- checkin form -->
+                            #parse("home/findform/checkin.vm")
                         </div>
                         <div class="col-md-2">
-                            <div class="form-group">
-                                <label>Checkout</label>
-                                <div class="has-icon">
-                                    <span class="icon-calendar"></span>
-                                    <input type="text" class="form-control datepicker" id="dateCheckout" name="" placeholder="dd/mm/yy" required>
-                                </div>
-                            </div>
+                            <!-- checkout form -->
+                            #parse("home/findform/checkout.vm")
                         </div>
                         <div class="col-md-5">
-                            <div class="form-group">
-                                <label>Room, Adults (18+), Children (0-12)</label>
-                                <div class="dropdown dropdown-room has-selector">
-                                    <span class="lang-en lang-active"></span>
-                                    <a href="#" id="roominfo-a" class="form-control dropdown-toggle">2 Rooms, 2 Adults, 2 Children</a>
-                                    <div class="dropdown-menu">
-                                        <div class="form-group-qty clearfix">
-                                            <label>Room</label>
-                                            <div id="controlQty" class="input-group">
-                                                <div class="input-group-btn">
-                                                    <button type="button" class="btn btn-min"></button>
-                                                </div>
-                                                <input type="text" class="form-control" name="roomcount" value="1">
-                                                <div class="input-group-btn">
-                                                    <button type="button" class="btn btn-plus"></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <ul class="form-group-room">
-                                            <li>
-                                                <div class="form-group-room-title">ROOM 1</div>
-                                                <div class="form-group">
-                                                    <label>Room Type</label>
-                                                    <select class="selector" style="width:100%;">
-                                                        <option value="">Single</option>
-                                                        <option value="">Double</option>
-                                                    </select>
-                                                </div>
-                                                <div class="row gutter5">
-                                                    <div class="col-sm-4">
-                                                        <div class="form-group">
-                                                            <label>Adults (+18)</label>
-                                                            <select class="selector" id="adultcount-select" style="width:100%;">
-                                                                <option value="1">1</option>
-                                                                <option value="2" selected>2</option>
-                                                                <option value="3">3</option>
-                                                                <option value="0">...</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-4">
-                                                        <div class="form-group">
-                                                            <label>Children (0-17)</label>
-                                                            <select class="selector" id="childcount-select" style="width:100%;">
-                                                                <option value="1" selected>1</option>
-                                                                <option value="2">2</option>
-                                                                <option value="3">3</option>
-                                                                <option value="0">...</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Chile age select row -->
-                                                <div class="row gutter5" id="childrow-div">
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            <!-- room form -->
+                            #parse("home/findform/room.vm")
                         </div>
                         <div class="col-md-3">
                             <button type="submit" class="btn btn-block btn-purple arrow-right">FIND HOTELS</button>
