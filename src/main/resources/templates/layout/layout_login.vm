@@ -3,7 +3,19 @@
 <!DOCTYPE html>
 <html lang="en-gb">
 
+<head>
+
+#macro(styleLayout)
     #parse("layout/head.vm")
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    $!bodyContent
+#end
+
+</head>
+
 
 <body>
 

@@ -147,13 +147,12 @@ textarea.form-control{height:auto;}
 .header-top .navi-lang.lang-sp{background-position:-75px 0;}
 
 .dropdown-lang > .form-control{padding-left:48px;}
-.dropdown-lang > .lang-active{position:absolute;left:13px;top:13px;width:25px;height:17px;background:url(../images/flags.png) no-repeat;}
+.dropdown-lang > .lang-active{position:absolute;left:13px;top:13px;width:25px;height:17px;}
 .dropdown-lang > .lang-active.lang-en{background-position:0 0;}
 .dropdown-lang .dropdown-menu{margin:15px 0 0;width:100%;border:0;}
 .dropdown-lang .dropdown-menu::before{content:"";position:absolute;left:50%;top:-10px;margin-left:-11px;width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-bottom:10px solid #fff;}
 .dropdown-lang .dropdown-menu ul{list-style:none;margin:0;padding:5px 0;}
 .dropdown-lang .dropdown-menu ul li{position:relative;display:block;padding:5px 15px 5px 48px;}
-.dropdown-lang .dropdown-menu ul li::before{content:"";position:absolute;left:13px;top:6px;width:25px;height:17px;background:url(../images/flags.png) no-repeat;}
 .dropdown-lang .dropdown-menu ul li.lang-en::before{background-position:0 0;}
 .dropdown-lang .dropdown-menu ul li.lang-fr::before{background-position:-25px 0;}
 .dropdown-lang .dropdown-menu ul li.lang-gr::before{background-position:-50px 0;}

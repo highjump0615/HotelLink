@@ -2,7 +2,17 @@
 
 #parse("layout/layout_login.vm")
 
+#@styleLayout()
+<!-- css style -->
+
+<link href="css/home.css" rel="stylesheet" type="text/css">
+<link href="plugin/flag/css/flag-icon.min.css" rel="stylesheet" type="text/css">
+
+#end
+
+
 #@mainLayout()
+<!-- html content -->
 
 <section class="section_hero hero_home_search">
     <div class="container">
@@ -30,8 +40,8 @@
                             <div class="form-group">
                                 <label>Nationality</label>
                                 <div class="dropdown dropdown-lang has-selector">
-                                    <span class="lang-en lang-active"></span>
-                                    <input type="text" class="form-control dropdown-toggle" name="nationality" placeholder="United Kingdom" required>
+                                    <span class="lang-en lang-active flag-icon flag-icon-cn"></span>
+                                    <input type="text" class="form-control dropdown-toggle" name="nationality" placeholder="China" required>
                                     <!-- Nationality dropdown menu -->
                                     <div class="dropdown-menu">
                                         <ul id="nationality-menu">
@@ -136,6 +146,8 @@
 #end
 
 #@scriptLayout()
+<!-- script -->
+
 <script src="js/object/BaseObject.js"></script>
 <script src="js/object/Country.js"></script>
 <script src="js/object/Nationality.js"></script>

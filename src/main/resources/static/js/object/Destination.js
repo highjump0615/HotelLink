@@ -10,6 +10,23 @@ var Destination = function (id, countryId, countryName, cityId, cityName, hotelI
     this.hotelStarRating = hotelStarRating;
     this.hotelCount = hotelCount;
     this.type = type;
+
+    this.toString = function () {
+        var strResult = '';
+
+        // hotel name
+        if (this.hotelName) {
+            strResult += this.hotelName + ',';
+        }
+
+        // city name
+        strResult += this.cityName + ',';
+
+        // country name
+        strResult += this.countryName;
+
+        return strResult;
+    }
 };
 
 Destination.fromObject = function (object) {

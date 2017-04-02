@@ -4,6 +4,13 @@
 
 var gdomDestinationMenu;
 var gdomNationalityMenu;
+
+var garyNationality = [];
+var gnNationalityIndex;
+
+var garyDestination = [];
+var gnDestinationIndex;
+
 var gnRoomCount = 1;
 var gnAdultCount = 2;
 var gnChildCount = 1;
@@ -14,8 +21,6 @@ var gnChildCount = 1;
 $('input[name="destination"]').keyup(function () {
     var strKeyword = $(this).val();
     var menuDropdown = $(this).next();
-
-    var aryDestination = [];
 
     if (strKeyword.length <= 0) {
         menuDropdown.hide();
@@ -32,7 +37,7 @@ $('input[name="destination"]').keyup(function () {
         crossDomain: true,
         success: function (data) {
             // clear list & array first
-            aryDestination.slice(0, aryDestination.length);
+            garyDestination.splice(0, garyDestination.length);
             gdomDestinationMenu.empty();
 
             for (var i = 0; i < data.length; i++) {
@@ -40,10 +45,10 @@ $('input[name="destination"]').keyup(function () {
 
                 // add to array
                 var destination = Destination.fromObject(dn);
-                aryDestination.push(destination);
+                garyDestination.push(destination);
 
                 // add to list
-                var strLi = '<li>' + destination.cityName + ', ' + destination.countryName + '</li>';
+                var strLi = '<li>' + destination.toString() + '</li>';
                 gdomDestinationMenu.append(strLi);
             }
 
@@ -79,7 +84,7 @@ $('input[name="nationality"]').keyup(function () {
         crossDomain: true,
         success: function (data) {
             // clear list & array first
-            aryNationality.slice(0, aryNationality.length);
+            garyNationality.splice(0, garyNationality.length);
             gdomNationalityMenu.empty();
 
             for (var i = 0; i < data.length; i++) {
@@ -87,10 +92,14 @@ $('input[name="nationality"]').keyup(function () {
 
                 // add to array
                 var nationality = Nationality.fromObject(dn);
-                aryNationality.push(nationality);
+                garyNationality.push(nationality);
 
                 // add to list
-                var strLi = '<li>' + nationality.countryName + '</li>';
+                var strLi = '<li>' +
+                    '<span class="flag-icon flag-icon-' + nationality.countryId + '"></span>'
+                    + nationality.countryName +
+                    '</li>';
+
                 gdomNationalityMenu.append(strLi);
             }
 
@@ -146,14 +155,31 @@ $(document).ready(function(){
     // init
     gdomDestinationMenu = $('#destination-menu');
     gdomDestinationMenu.on('click', 'li', function () {
+        gnDestinationIndex = $(this).index();
+
         // Set selected destination
         $('input[name="destination"]').val($(this).html());
     });
 
     gdomNationalityMenu = $('#nationality-menu');
     gdomNationalityMenu.on('click', 'li', function () {
+        gnNationalityIndex = $(this).index();
+        var nationality = garyNationality[gnNationalityIndex];
+
         // Set selected nationality
-        $('input[name="nationality"]').val($(this).html());
+        var domInput = $('input[name="nationality"]');
+        domInput.val(nationality.countryName);
+
+        // set flag
+        var domFlag = domInput.prev();
+        var aryClass = domFlag.attr('class').split(' ');
+        $.each(aryClass, function(index, item) {
+            // get current country flag
+            if (item.indexOf('flag-icon-') == 0) {
+                domFlag.removeClass(item);
+            }
+        });
+        domFlag.addClass('flag-icon-' + nationality.countryId);
     });
 
     // room info

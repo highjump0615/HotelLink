@@ -1,0 +1,20 @@
+#nationality-menu li {
+    padding-left: 15px;
+}
+
+#nationality-menu li span {
+    width: 25px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+#destination-menu li::before {
+    content:"";
+    position:absolute;
+    left:13px;
+    top:6px;
+    width:25px;
+    height:17px;
+    background-position: -25px -68px;
+    background-image:url(../images/sprites.png);
+}
