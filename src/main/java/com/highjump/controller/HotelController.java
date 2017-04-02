@@ -1,7 +1,9 @@
 package com.highjump.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,6 +33,13 @@ public class HotelController {
 //
 //        return "search";
 //    }
+
+    @RequestMapping(value = "/detail/{id}", method = RequestMethod.GET)
+    public String hotel(@PathVariable("id") int id, Map<String, Object> model) {
+        model.put("page", "index");
+
+        return "hotel";
+    }
 
     @RequestMapping("/search")
     public String search(HttpServletRequest request, Map<String, Object> model) {

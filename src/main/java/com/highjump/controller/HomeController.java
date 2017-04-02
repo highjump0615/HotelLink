@@ -17,6 +17,13 @@ public class HomeController {
     public String index(HttpSession session, Map<String, Object> model) {
         model.put("page", "index");
 
+        return "index";
+    }
+
+    @RequestMapping("/home")
+    public String home(HttpSession session, Map<String, Object> model) {
+        model.put("page", "index");
+
         return "home";
     }
 
