@@ -3,9 +3,18 @@
 <!DOCTYPE html>
 <html lang="en-gb">
 
-    #parse("layout/head.vm")
+<head>
 
-<body>
+    #macro(styleLayout)
+        #parse("layout/head.vm")
+
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+
+        $!bodyContent
+    #end
+
+</head>
 
 <div class="header">
     <div class="header-top">

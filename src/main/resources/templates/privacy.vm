@@ -2,6 +2,12 @@
 
 #parse("layout/layout.vm")
 
+#@styleLayout()
+<!-- css style -->
+
+#end
+
+
 #@mainLayout()
 
 <section class="page-heading">

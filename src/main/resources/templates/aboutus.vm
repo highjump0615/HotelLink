@@ -2,6 +2,12 @@
 
 #parse("layout/layout.vm")
 
+#@styleLayout()
+<!-- css style -->
+
+#end
+
+
 #@mainLayout()
 
 <section class="section_hero hero_brief" style="background-image:url(images/hero_aboutus.jpg)">
