@@ -7,6 +7,8 @@
     <meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
     <meta content="Jim Fernando" name="author">
 
+    <base href="/" target="_self">
+
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="images/touch-icon-iphone.png">
     <link rel="apple-touch-icon" sizes="76x76" href="images/touch-icon-ipad.png">

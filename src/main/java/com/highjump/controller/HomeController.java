@@ -42,7 +42,7 @@ public class HomeController {
     }
 
     @RequestMapping("/privacy")
-    public String privact(Map<String, Object> model) {
+    public String privacy(Map<String, Object> model) {
         model.put("page", "index");
 
         return "privacy";
