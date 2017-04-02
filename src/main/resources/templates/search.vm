@@ -1,0 +1,248 @@
+#set ($title = "Search")
+
+#parse("layout/layout_login.vm")
+
+#@styleLayout()
+<!-- css style -->
+
+<link href="css/page/homefind.css" rel="stylesheet" type="text/css">
+<link href="plugin/flag/css/flag-icon.min.css" rel="stylesheet" type="text/css">
+
+#end
+
+
+#@mainLayout()
+
+<section class="page-heading">
+    <div class="container">
+        <div class="form-search">
+            <form id="findhotel-form" method="post" action="">
+                <div class="row gutter5">
+                    <div class="col-md-3">
+                        <!-- destination form -->
+                        #set ($formlabel = "City for Destinations")
+                        #parse("home/findform/destination.vm")
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <!-- nationality form -->
+                            #parse("home/findform/nationality.vm")
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="row gutter5">
+                            <div class="col-md-2">
+                                <!-- checkin form -->
+                                #parse("home/findform/checkin.vm")
+                            </div>
+                            <div class="col-md-2">
+                                <!-- checkout form -->
+                                #parse("home/findform/checkout.vm")
+                            </div>
+                            <div class="col-md-5">
+                                <!-- room form -->
+                                #parse("home/findform/room.vm")
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-block btn-purple arrow-right">FIND HOTELS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="space-xs pt0">
+    <div class="container">
+
+        <div id="main-contents" class="sideleft">
+
+            <!-- Sidebar -->
+            <div id="side" class="side-sm">
+                <div class="widget widget_filters">
+                    <div class="widget_filters-heading">Filter by search result</div>
+                    <div class="widget-filter widget-filter-search">
+                        <div class="widget-filter-title">Search by property name container</div>
+                        <hgroup>
+                            <button type="submit"></button>
+                            <input type="text" class="form-control" placeholder="Input hotel name here">
+                        </hgroup>
+                    </div>
+                    <div class="widget-filter widget-filter-rating">
+                        <div class="widget-filter-title toggle-filter">Star Rating</div>
+                        <hgroup>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="rating" class="checkbox-filter">
+                                    <div class="rate rate-sm"><span class="rate5"></span></div> 5 stars (28)
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="rating" class="checkbox-filter">
+                                    <div class="rate rate-sm"><span class="rate4"></span></div> 4 stars (84)
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="rating" class="checkbox-filter">
+                                    <div class="rate rate-sm"><span class="rate3"></span></div> 3 stars (117)
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="rating" class="checkbox-filter">
+                                    <div class="rate rate-sm"><span class="rate2"></span></div> 2 stars (152)
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="rating" class="checkbox-filter">
+                                    <div class="rate rate-sm"><span class="rate1"></span></div> 1 star (6)
+                                </label>
+                            </div>
+                        </hgroup>
+                    </div>
+
+
+                    <div class="widget-filter widget-filter-listing">
+                        <div class="widget-filter-title toggle-filter">Review Score</div>
+                        <hgroup>
+                            <div class="checkbox"><label><input type="checkbox" name="review_score" class="checkbox-filter"><span class="checkbox-counter">210</span>Wonderful: 9+</label></div>
+                            <div class="checkbox"><label><input type="checkbox" name="review_score" class="checkbox-filter"><span class="checkbox-counter">112</span>Very good: 8+</label></div>
+                            <div class="checkbox"><label><input type="checkbox" name="review_score" class="checkbox-filter"><span class="checkbox-counter">365</span>Good: 7+</label></div>
+                            <div class="checkbox"><label><input type="checkbox" name="review_score" class="checkbox-filter"><span class="checkbox-counter">895</span>Pleasant: 6+</label></div>
+                            <div class="checkbox"><label><input type="checkbox" name="review_score" class="checkbox-filter"><span class="checkbox-counter">457</span>No rating</label></div>
+                        </hgroup>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main contents -->
+            <div id="main">
+                <hr class="break break30">
+                <ul class="filter">
+                    <li><span class="filter-label">Sort by:</span></li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Price<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Lowest prices</a></li>
+                            <li><a href="#">Highest prices</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="items">
+                    #foreach($i in [0..5])
+                    <li class="item clearfix">
+                        <figure>
+                            <a href="/hotel/detail/238"><img src="images/temp/temp_hotel001_310x235.jpg" alt=""></a>
+                        </figure>
+                        <hgroup>
+                            <div class="item-header">
+                                <div class="item-header-title">
+                                    <div class="item-header-rates">
+                                        <div class="item-header-score">Excellent 8.6</div>
+                                        <div class="item-header-reviews">2,339 reviews</div>
+                                    </div>
+                                    Valarmathi Kongunaatu Samayal
+                                    <div class="rate"><span class="rate5"></span></div>
+                                </div>
+                                <!--<div class="item-header-meta">Distance to Bejing station Museum is 45km(41mi) </div>-->
+                            </div>
+                            <div class="item-options">
+                                <div class="item-option item-option-heading">
+                                    <div class="item-option-roomtype">Room Type</div>
+                                    <div class="item-option-breakfast">Breakfast</div>
+                                    <div class="item-option-policy">Policy</div>
+                                    <div class="item-option-price">Price</div>
+                                    <div class="item-option-action"></div>
+                                </div>
+                                <div class="item-option">
+                                    <div class="item-option-roomtype">
+                                        <div class="roomtype-name">Double Room x2</div>
+                                        <div class="roomtype-name">Double Room + Twin Room</div>
+                                    </div>
+                                    <div class="item-option-breakfast">Available</div>
+                                    <div class="item-option-policy"><a href="#">View Policy</a> <span class="ico ico-question-circle" data-toggle="tooltip" title="Policy information goes here..."></span></div>
+                                    <div class="item-option-price">
+                                        <div class="price-discount">
+                                            <div class="price-discount-percentage">46%</div>
+                                            <div class="price-discount-amount">$25,962</div>
+                                        </div>
+                                        <div class="price-amount">
+                                            <div class="price-amount-value">$567.75 <span class="ico ico-question-circle" data-toggle="tooltip" title="Price information goes here..."></span></div>
+                                            <div class="price-amount-notes">Total price(incl. tax)</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-option-action">
+                                        <a href="#" class="booknow">BOOK NOW<span class="ico ico-arrow-right-sm"></span></a>
+                                    </div>
+                                </div>
+                                <div class="item-option">
+                                    <div class="item-option-roomtype">
+                                        <div class="roomtype-name">Superior Room</div>
+                                    </div>
+                                    <div class="item-option-breakfast">Available</div>
+                                    <div class="item-option-policy"><a href="#">View Policy</a> <span class="ico ico-question-circle" data-toggle="tooltip" title="Policy information goes here..."></span></div>
+                                    <div class="item-option-price">
+                                        <div class="price-discount">
+                                            <div class="price-discount-percentage">46%</div>
+                                            <div class="price-discount-amount">$25,962</div>
+                                        </div>
+                                        <div class="price-amount">
+                                            <div class="price-amount-value">$567.75 <span class="ico ico-question-circle" data-toggle="tooltip" title="Price information goes here..."></span></div>
+                                            <div class="price-amount-notes">Total price(incl. tax)</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-option-action">
+                                        <a href="#" class="booknow">BOOK NOW<span class="ico ico-arrow-right-sm"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-footer">
+                                <a href="#" class="seeall">SEE ALL ROOM OPTIONS</a>
+                            </div>
+                        </hgroup>
+                    </li>
+                    #end
+                </ul>
+
+                <hr class="break break10">
+
+                <div class="pagination-wrapper">
+                    <ul class="pagination">
+                        <li><a href="#" aria-label="Previous"><span aria-hidden="true">Prevous</span></a></li>
+                        <li><a href="#">1</a></li>
+                        <li><span>...</span></li>
+                        <li><a href="#">2</a></li>
+                        <li class="active"><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><span>...</span></li>
+                        <li><a href="#">112</a></li>
+                        <li><a href="#" aria-label="Next"><span aria-hidden="true">Next</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+#end
+
+#@scriptLayout()
+<!-- script -->
+
+<script src="js/object/BaseObject.js"></script>
+<script src="js/object/Country.js"></script>
+<script src="js/object/Nationality.js"></script>
+<script src="js/object/Destination.js"></script>
+<script src="js/home.js"></script>
+
+<script src="js/search.js"></script>
+#end

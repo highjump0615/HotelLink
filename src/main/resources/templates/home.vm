@@ -1,0 +1,69 @@
+#set ($title = "Homepage")
+
+#parse("layout/layout_login.vm")
+
+#@styleLayout()
+<!-- css style -->
+
+<link href="css/page/homefind.css" rel="stylesheet" type="text/css">
+<link href="css/page/home.css" rel="stylesheet" type="text/css">
+<link href="plugin/flag/css/flag-icon.min.css" rel="stylesheet" type="text/css">
+
+#end
+
+
+#@mainLayout()
+<!-- html content -->
+
+<section class="section_hero hero_home_search">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Welcome to Our Hotereverlink agencies</h1>
+            <h3>Provide Hotel Booking Service for Travel Agencies</h3>
+            <div class="form-search">
+                <form id="findhotel-form" method="get" action="/hotel/search">
+                    <div class="row gutter7">
+                        <div class="col-md-8">
+                            <!-- destination form -->
+                            #set ($formlabel = "Where do you want to go?")
+                            #parse("home/findform/destination.vm")
+                        </div>
+                        <div class="col-md-4">
+                            <!-- nationality form -->
+                            #parse("home/findform/nationality.vm")
+                        </div>
+                    </div>
+                    <div class="row gutter7">
+                        <div class="col-md-2">
+                            <!-- checkin form -->
+                            #parse("home/findform/checkin.vm")
+                        </div>
+                        <div class="col-md-2">
+                            <!-- checkout form -->
+                            #parse("home/findform/checkout.vm")
+                        </div>
+                        <div class="col-md-5">
+                            <!-- room form -->
+                            #parse("home/findform/room.vm")
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="btn btn-block btn-purple arrow-right">FIND HOTELS</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+#end
+
+#@scriptLayout()
+<!-- script -->
+
+<script src="js/object/BaseObject.js"></script>
+<script src="js/object/Country.js"></script>
+<script src="js/object/Nationality.js"></script>
+<script src="js/object/Destination.js"></script>
+<script src="js/home.js"></script>
+#end

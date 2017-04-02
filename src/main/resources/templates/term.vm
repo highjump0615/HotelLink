@@ -1,0 +1,178 @@
+#set ($title = "Terms and Conditions")
+
+#parse("layout/layout.vm")
+
+#@styleLayout()
+<!-- css style -->
+
+#end
+
+
+#@mainLayout()
+
+<section class="page-heading">
+    <div class="container">
+        <h1>Terms & Conditions</h1>
+    </div>
+</section>
+
+<section class="space-sm">
+    <div class="container">
+
+        <div class="tabled">
+            <div class="tabled-heading">
+                <h4>EVER-LINK AB</h4>
+                <h1>Terms and Conditions for Online Booking System</h1>
+            </div>
+            <div class="tabled-body">
+                <article class="post post-default">
+                    <h3 class="text-purple-dark mt0">This Agreement was last modified on March 12, 2014.</h3>
+                    <p>In this document you will find all the useful information about our online reservation system along with our terms & conditions. These terms & conditions are bonding between whoever shall access our product via the Online Reservation System, XML and/or traditional manual booking methods.</p>
+                    <h4 class="text-purple-dark">General Information</h4>
+                    <ul class="list-bullets">
+                        <li>
+                            <p>Your company will be wholly responsible for the payment of the bookings implemented through our website.</p>
+                        </li>
+                        <li>
+                            <p>It is the agency’s responsibility to enter the correct email address when signing up to Hoteleverlink system. Since this email address will be used for all communications regarding bookings made through the system, it is the agency’s responsibility to provide the correct email address and notify of any changes made to this email address.</p>
+                        </li>
+
+                        <li>
+                            <p>Hoteleverlink cannot guarantee the exact bedding type in the room or any special request such as a non-smoking room or a room on a high floor. Hoteleverlink will forward such requests to the hotel but it will be subject to the availability of the hotel at the time of the arrival.</p>
+                        </li>
+                        <li>
+                            <p>For your protection, Hoteleverlink will not accept direct communications with your clients by phone, fax or email. It will be our responsibility to immediately inform you if this occurs.</p>
+                        </li>
+                        <li>
+                            <p>All of the information notes on the hotels and pictures are to give you a general idea about the hotel. Hoteleverlink cannot be held responsible in any way if the results are inaccurate or incomplete.</p>
+                        </li>
+                        <li>
+                            <p>Hoteleverlink functions as an intermediary. We will not be liable if we are unable to fulfill a booking by reason of natural disasters, act of God, any failure or delay of transportation or any similar events beyond our control.</p>
+                        </li>
+                        <li>
+                            <p>Hoteleverlink reserves the right to change and modify these terms and conditions at any time without prior notice.</p>
+                        </li>
+                    </ul>
+                    <h4 class="text-purple-dark">Number of Pax</h4>
+                    <ul class="list-bullets">
+                        <li><p>The site and our online services are designated for F.I.T (free independent travel) bookings, used solely for individual customers up to 9 people or/and 4 rooms per hotel.</p></li>
+                        <li><p>A hotel has the right to cancel bookings made for more than 9 pax from the same agent and similar dates or to modify rates and booking conditions.</p></li>
+                        <li><p>If you will book group reservations as FIT reservation, please be aware that the hotel has the right to cancel the booking if the passenger is attending any conference, congress, convention, trade fair or any special event, or in the event of relocation the hotel will not be bound to relocate all as a guests and can split the guests between a few hotels.</p></li>
+                        <li><p>For group bookings and any related enquiries please email us.</p></li>
+                    </ul>
+                    <h4 class="text-purple-dark">Purpose of Using Our System</h4>
+
+                    <ul class="list-bullets">
+                        <li><p>The reservations are accepted from Hoteleverlink on the basis of "Good Faith", we do not accept misuse of the system; it will not be permitted to hold spaces from reselling, resulting in cancellation. </p></li>
+                        <li><p>Any use of misconduct will be considered as "breach of contract" and will allow the right to cancel bookings and terminate the contract.</p></li>
+                    </ul>
+                    <h4 class="text-purple-dark">Client Nationality</h4>
+
+                    <ul class="list-bullets">
+                        <li><p>The agency will ensure that they enter the nationality of the client when making a booking search. The rates displayed will be specific to the nationality entered. Any incorrect information regarding nationality may result in a financial loss and Hoteleverlink cannot be held responsible for such losses.</p></li>
+                    </ul>
+                    <h4 class="text-purple-dark">Star Rating</h4>
+
+                    <ul class="list-bullets">
+                        <li><p>The classification provided on the website serves as an indication only based on local standards in that country. Hoteleverlink aims only to give general information and cannot be held responsible for the star rating nor the hotel information.</p></li>
+                    </ul>
+                    <h4 class="text-purple-dark">Rates</h4>
+
+                    <ul class="list-bullets">
+                        <li><p>The prices are finalized for the total amount at the time of confirmation.</p></li>
+                        <li><p>The rates listed on our booking system are F.I.T rates for leisure clients only. These rates do not apply for any type of convention or group travel.</p></li>
+                        <li><p>The rates displayed on the Hoteleverlink system are valid for leisure use only. If the client of the agency is not travelling for leisure purposes and if it becomes known, Hoteleverlink cannot be held responsible if the hotel charges at the rack rate or higher rate than original booking.</p></li>
+                        <li><p>Rates are inclusive of VAT unless otherwise stated. The rates displayed in the system may not include tourist, local or city taxes. City tax information may be displayed on the remarks section on the voucher but not always.</p></li>
+                        <li><p>Resort fees, extra bedding such as cots and rollaway beds are payable locally in some hotels but can be requested by submitting your special request online.</p></li>
+                    </ul>
+                    <h4 class="text-purple-dark">Extra Charges</h4>
+
+                    <ul class="list-bullets">
+                        <li><p>Hoteleverlink cannot be held responsible for the resort fees that a hotel implement (mainly hotels in the USA). This fee is charged by the hotel directly and Hoteleverlink has no control over this practice.</p></li>
+                        <li><p>Hoteleverlink has no responsibility for the extra charges at hotels such as parking fees, mini fridge, safety box, television remote, sauna swimming pool use etc.</p></li>
+                        <li><p>Hoteleverlink aims to inform clients of any supplements implemented by the hotel such as gala dinners or compulsory dinners during festive seasons. However Hoteleverlink cannot be held responsible for such supplements implemented by the hotel.</p></li>
+                    </ul>
+                    <h4 class="text-purple-dark">Confirmation</h4>
+
+                    <ul class="list-bullets">
+                        <li><p>No booking will be considered confirmed until the travel agency sends payment or the requested deposit for the booking. All confirmed bookings are guaranteed, whatever the arrival time to the hotel, therefore any no show will require full cost (100% charges).</p></li>
+                    </ul>
+                    <h4 class="text-purple-dark">Emission of Hotel Vouchers</h4>
+
+                    <ul class="list-bullets">
+                        <li><p>The system permits you to issue vouchers relative to your reservations: they can be personalised with your company logo. In any case where the system makes errors, Hoteleverlink will hold itself responsible. </p></li>
+                        <li><p>In the case in which we received an invoice from the hotels/suppliers with your voucher enclosed in which more nights have been confirmed than in the system, we will send you an invoice for the additional nights.</p></li>
+                    </ul>
+                    <h4 class="text-purple-dark">Fair Periods</h4>
+
+                    <ul class="list-bullets">
+                        <li><p>During fair periods or specific events the maximum number of pax rule and rate do not apply and the hotel has the right to cancel, modify rates and booking conditions after the confirmation.</p></li>
+                        <li><p>During fair periods, our rates may be closer to those rack rates of the hotels. We advise informing the client that the price paid may sometimes be higher than that displayed by the hotel.</p></li>
+                        <li><p>Occasionally you may be asked for the prepayment of the entire stay. If such prepayment should not reach us within the dates discussed, we reserve the right to cancel the reservation without issuing further warnings.</p></li>
+                        <li><p>Some hotels may stipulate that bookings during Fair periods or high season are for a minimum stay. Once accepting the booking you will be liable for all the nights whereby no refund will be given. If cancelling or departing earlier full charges will apply.</p></li>
+                        <li><p>During fair periods some hotels do not accept bookings for more than 3 rooms for the same period. In the event that a booking has already been made, we will inform you accordingly.</p></li>
+                        <li><p>Rooms may not be held for these periods in fictitious names. In such cases non-arrival charges may apply. If you do not book with the correct names, we reserve the right to cancel the booking and/or impose no-show/cancellation on behalf of the supplier.</p></li>
+                    </ul>
+                    <h4 class="text-purple-dark">No Show</h4>
+
+                    <ul class="list-bullets">
+                        <li><p>In case of a "no show" an invoice will be issued for the amount displayed in the cancellation policy at the time of booking. Please note the amount can be up to 100% depending of hotel/supplier terms.</p></li>
+                    </ul>
+                    <h4 class="text-purple-dark">Cancellations & Amendments</h4>
+
+                    <ul class="list-bullets">
+                        <li><p>Reservations must be cancelled directly on the website. Cancellations are subject to the specific policy as outlined during the reservation process or/and on your confirmation.</p></li>
+                        <li><p>Fees may apply for cancellations, amendments, no-shows or early checkouts. You agree to pay any cancellation or change fee that you may incur. You will be notified before the reservation order is completed if a reservation is non-refundable. In some cases, hotels do not permit changes to or cancellations of reservations after they are made.</p></li>
+                        <li><p>At the time of booking the real name of passenger has to be entered. Hotels have the right to refuse any change of name and Hoteleverlink cannot be held responsible.</p></li>
+                        <li><p>The customer clients are not allowed to cancel or amend directly with the hotel.</p></li>
+                        <li><p>During particular periods (fairs, congress or events), the terms of cancellation may vary.</p></li>
+                        <li><p>Any kind of amendments might be considered as a new booking by the hotel/supplier and this may cause the change of rates.</p></li>
+                        <li><p>Any amendment is on request and is not guaranteed.</p></li>
+                    </ul>
+                    <h4 class="text-purple-dark">Book out</h4>
+
+                    <ul class="list-bullets">
+                        <li><p>In cases where the hotel booked is included but not limited to closed, overbooked or has maintenance problems and cannot provide the rooms booked, Hoteleverlink is responsible for providing an alternative hotel with the similar category of the original hotel.</p></li>
+                        <li><p>Hoteleverlink will always try to provide a better alternative and/or compensation whenever possible but better alternative and/or compensation are not contractual in case of a book out.</p></li>
+                        <li><p>Hoteleverlink cannot be held responsible for the losses for the reallocation as it is beyond the control of Hoteleverlink.</p></li>
+                        <li><p>As soon as the prior relocation notice is sent by the hotel/hotel supplier, Hoteleverlink will contact you by email or a message in the system. However, in some cases the hotel may relocate the bookings at the time of check-in, without prior notice which is beyond the control of Hoteleverlink.</p></li>
+                        <li><p>On spot relocations the client/passenger must notify Hoteleverlink in the event of any hotel discrepancy upon arrival. Failure to so may affect future complaints or any compensation settlement.</p></li>
+                    </ul>
+                    <h4 class="text-purple-dark">Pending Reservations</h4>
+
+                    <ul class="list-bullets">
+                        <li><p>In some cases a hotel may appears as pending at the time of booking due to the fact that the allotment has been taken by another agency prior to you completing your booking or due to a technical issue.</p></li>
+                        <li><p>In the event that a booking status is pending, our operations team will get in touch within 48 hours and we will do our best to confirm such booking. In the event this is not possible we will advise you to book an alternative hotel.</p></li>
+                    </ul>
+                    <h4 class="text-purple-dark">Payments</h4>
+
+                    <ul class="list-bullets">
+                        <li><p>Payments will be charged in USD. If you are paying in any other currencies the amount will be converted into USD using the exchange rate on the day at the time of the payment.</p></li>
+                        <li><p>As a cash or credit card client, payment has to be done BEFORE the cancelation deadline. If you pay by bank transfer money has to be in our account BEFORE the cancellation deadline. If the funds have not been received in our bank account the Hoteleverlink system will automatically cancel your reservation at cancellation deadline.</p></li>
+                        <li><p>If you are a Credit Client please refer to your agreement.</p></li>
+                        <li><p>All bank charges and cost of transmitting payment must be borne by the client, including intermediary bank charges where applied.</p></li>
+                    </ul>
+                    <h4 class="text-purple-dark">Voucher</h4>
+
+                    <ul class="list-bullets">
+                        <li><p>The Travel Agency will use the voucher-fax or Voucher email system used by Hoteleverlink, alternatively a voucher can be issued according to Hoteleverlink's booking instructions at the moment of confirmation of the services.</p></li>
+                    </ul>
+                    <h4 class="text-purple-dark">Complaints</h4>
+
+                    <ul class="list-bullets">
+                        <li><p>In case of emergency or if you have problem at the hotel/transfer, the agency or the end customer has to call us at +46 733859168 and we are available 24/7. Please note we will NOT CONSIDER any complaint/refund if you do not call the above number in case of problems with our services.</p></li>
+                        <li><p>In case of disputes or protests, the complaint should come to us in writing within 15 days of the last day of the occupancy and only if the agency or the end customer previously called the Hoteleverlink phone at the time of problem. After this deadline nothing else will be taken into consideration.In case of disputes or protests, the complaint should come to us in writing within 15 days of the last day of the occupancy and only if the agency or the end customer previously called the Hoteleverlink phone at the time of problem. After this deadline nothing else will be taken into consideration.</p></li>
+                        <li><p>If the client leaves the hotel before the check-out date, an invoice will be issued for the full stay and if the hotel confirms a reduction, it will be our responsibility to issue a credit note for the amount to refund. It is compulsory for the client prior to leaving the hotel to ask for a written declaration that states the exact date in which the stay was terminated and its availability to carry out the refund from the hotel. This document should be presented to Hoteleverlink in order to get the refund for the unused nights.</p></li>
+                        <li><p>Hoteleverlink does not take any responsibility for the quality of the hotel booked. Any complaints relating to hotel facilities, standard or quality do need to be brought to the attention of the hotel management at the time of the stay so the hotel can be given the opportunity to try and rectify the situation. If you have done this and not received a satisfactory resolution to the problem please contact Hoteleverlink. If an offer or reduction is made by the hotel where Hoteleverlink is required to resolve the issue later, the passenger will need to provide proof of this in writing endorsed and signed by the hotel.</p></li>
+                        <li><p>In the event of a problem at the hotel which results in client having to pay, including but not limited to an unnecessary fee, for a service which is expected to be provided, the client is asked to obtain any receipts as proof of purchase. Upon the client's return, please submit the receipt(s) to our Customer Service Department. Please note that we cannot refund any costs without the provision of a receipt. Please note that a full refund is not guaranteed.</p></li>
+                        <li><p>Hoteleverlink team will get back to you up to 30 working days depending upon the nature of your query.</p></li>
+                    </ul>
+                    <p>Travel Agencies choosing to make bookings through Hoteleverlink, implicitly accept the conditions laid out here, along with those specific conditions applicable at each of the destinations on offer and that are operated by our organisation.</p>
+                    <p>If you disagree with the Terms and Conditions or the Privacy Policy, please do not sign up and do not use the Hoteleverlink services.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+#end

@@ -1,0 +1,107 @@
+## initial room count
+#set ($nRoomCount = 1)
+#set ($nRoomCount = $!roomcount[0])
+
+## initial adult count
+#set ($nAdultCount = 2)
+#set ($nAdultCount = $!adultcnt[0])
+
+## initial child count
+#set ($nChildCount = 1)
+#if ($!{childcnt})
+    #set ($nChildCount = $nChildCount.parseInt($!childcnt[0]))
+#end
+
+<div class="form-group">
+    <label>Room, Adults (18+), Children (0-12)</label>
+    <div class="dropdown dropdown-room has-selector">
+        <span class="lang-en lang-active"></span>
+        <a href="#" id="roominfo-a" class="form-control dropdown-toggle">$nRoomCount Rooms, $nAdultCount Adults, $nChildCount Children</a>
+        <div class="dropdown-menu">
+            <div class="form-group-qty clearfix">
+                <label>Room</label>
+                <div id="controlQty" class="input-group">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-min"></button>
+                    </div>
+                    <input type="text" class="form-control" name="roomcount" value="$nRoomCount">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-plus"></button>
+                    </div>
+                </div>
+            </div>
+            <ul class="form-group-room">
+                <li>
+                    <div class="form-group-room-title">ROOM 1</div>
+                    <div class="form-group">
+                        <label>Room Type</label>
+                        <select class="selector" name="roomtype" style="width:100%;">
+                            <option value="1">Single</option>
+                            <option value="2">Double</option>
+                        </select>
+                    </div>
+                    <div class="row gutter5">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Adults (+18)</label>
+                                <select class="selector" name="adultcnt" id="adultcount-select" style="width:100%;">
+                                    ## select adult count
+                                    #foreach($i in [1..3])
+                                        #if ($i == $nAdultCount)
+                                            <option value="$i" selected>$i</option>
+                                        #else
+                                            <option value="$i">$i</option>
+                                        #end
+                                    #end
+                                    <option value="0">...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Children (0-17)</label>
+                                <select class="selector" name="childcnt" id="childcount-select" style="width:100%;">
+                                    ## select child count
+                                    #foreach($i in [1..3])
+                                        #if ($i == $nChildCount)
+                                            <option value="$i" selected>$i</option>
+                                        #else
+                                            <option value="$i">$i</option>
+                                        #end
+                                    #end
+                                    <option value="0">...</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    ## Chile age select row
+                    <div class="row gutter5" id="childrow-div">
+                        #foreach($i in [1..$nChildCount])
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Child $i Age</label>
+                                <select class="selector" name="childage" style="width:100%;">
+                                    #foreach($j in [1..6])
+                                        ## set child age
+                                        #set ($nChildAge = 6)
+                                        #if ($!{childage})
+                                            #set ($nIndex = $i - 1)
+                                            #set ($nChildAge = $nChildAge.parseInt($!childage[$nIndex]))
+                                        #end
+
+                                        #if ($j == $nChildAge)
+                                            <option value="$j" selected>$j</option>
+                                        #else
+                                            <option value="$j">$j</option>
+                                        #end
+                                    #end
+                                </select>
+                            </div>
+                        </div>
+                        #end
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

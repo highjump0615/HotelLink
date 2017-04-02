@@ -1,0 +1,64 @@
+#set ($title = "Aboutus")
+
+#parse("layout/layout.vm")
+
+#@styleLayout()
+<!-- css style -->
+
+#end
+
+
+#@mainLayout()
+
+<section class="section_hero hero_brief" style="background-image:url(images/hero_aboutus.jpg)">
+    <div class="container">
+        <div class="hero-content text-center">
+            <h1>HotelEverlink</h1>
+            <h3>Strong Supply, Competitive Rate, Efficient Technology, Quality Experience</h3>
+            <p>We are a global distributor of accommodation and a professional solution to the world's travel trade.<br>When you choose us, you choose simplicity at a click of a button.</p>
+            <hr class="break break10">
+            <a href="#" class="btn btn-purple arrow-circle-right">SIGNUP NOW</a>
+        </div>
+    </div>
+</section>
+
+<section class="space-lg">
+    <div class="container">
+
+        <div id="main-contents">
+            <div id="main">
+                <article class="post">
+                    <div class="post-title">
+                        <h1 class="text-purple-dark">About Us</h1>
+                    </div>
+                    <p>Hoteleverlink is a newly created online hotel wholesaler with vast portfolio of over 100,000 global accommodation properties, offering reservation services through its own solid platform for travel distribution. We highly value your trust in choosing hoteleverlink for your online hotel reservation, as we have different features in:</p>
+                    <p>
+                    <ul>
+                        <li>Steady supply of inventory particularly in Europe, America & Southeast Asia</li>
+                        <li>Advanced technology guarantees an access to its portfolio with real time availability.</li>
+                        <li>Offering most competitive prices, one-stop shopping source for hotel pricing</li>
+                        <li>Flexibility access to our portfolio whether through its extranet for professionals, API interface with white label B2B solution, and even mobile app</li>
+                        <li>Greater rate options for our partners help them maximize their profits and add value</li>
+                        <li>Offering 24/7 localized customer service</li>
+                    </ul>
+                    </p>
+                    <p>Currently, Hoteleverlink has headquarters in Stockholm and strengthens its international presence with local offices in Germany, USA as well as representatives in over 4 countries. Hoteleverlink is now dedicated to growing with thousands of global clients continually profiting from hoteleverlink's business, our reputation for delivering success is well established.</p>
+                    <a href="#" class="btn btn-lg btn-purple-dark arrow-circle-right">SIGNUP NOW</a>
+                </article>
+            </div>
+
+            <!-- signin form -->
+            <div id="side">
+                <div class="widget widget_signin">
+                    <div class="signin-heading">SIGNIN NOW!!!</div>
+
+                    #parse("signinPopup.vm")
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+#end

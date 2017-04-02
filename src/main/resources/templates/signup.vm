@@ -1,0 +1,169 @@
+#set ($title = "Signup")
+
+#parse("layout/layout.vm")
+
+#@styleLayout()
+<!-- css style -->
+
+#end
+
+
+#@mainLayout()
+
+<section class="page-heading">
+    <div class="container">
+        <h1>Signup Now!!!</h1>
+    </div>
+</section>
+
+<section class="space-sm">
+    <div class="container">
+
+        <div class="tabled">
+            <div class="tabled-heading">
+                <h2>Sign up for a New Account</h2>
+            </div>
+            <div class="tabled-body">
+                <div class="row">
+                    <div class="col-md-8 col-border col-border-right">
+                        <form method="post" action="" class="inputs-default">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">* Agency Name</label>
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">* Agency Type</label>
+                                        <select class="selector" style="width:100%;">
+                                            <option value="">Please select</option>
+                                            <option value="">Agency type A</option>
+                                            <option value="">Agency type B</option>
+                                            <option value="">Agency type C</option>
+                                            <option value="">Agency type D</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">* Contact Person First Name</label>
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Contact Person Position</label>
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">* Phone Number</label>
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Website Address</label>
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">* City (and State)</label>
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">* Official Company Name</label>
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">* Interested in</label>
+                                        <select class="selector" style="width:100%;">
+                                            <option value="">Please select</option>
+                                            <option value="">Interest option A</option>
+                                            <option value="">Interest option B</option>
+                                            <option value="">Interest option C</option>
+                                            <option value="">Interest option D</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">* Contact Person Last Name</label>
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">* Email address</label>
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Fax Number</label>
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">* Country</label>
+                                        <select class="selector" style="width:100%;">
+                                            <option value="">Please select</option>
+                                            <option value="">China</option>
+                                            <option value="">Germany</option>
+                                            <option value="">Japan</option>
+                                            <option value="">Singapore</option>
+                                            <option value="">Spain</option>
+                                            <option value="">United State</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">VAT Number</label>
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">* Address</label>
+                                <textarea rows="4" class="form-control"></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Company Registration No</label>
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">* Password</label>
+                                        <input type="password" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">* Username</label>
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">* Confirm Password</label>
+                                        <input type="password" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="break break10">
+                            <div class="mark-required">* required fields</div>
+                            <button type="submit" class="btn btn-purple-dark arrow-circle-right">SIGNUP NOW</button>
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="sidebar">
+                            <div class="tabled_widget">
+                                <h3 class="tabled_widget_title">Terms and Conditions</h3>
+                                <ul class="checkmark-circle">
+                                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since</li>
+                                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</li>
+                                    <li>Lorem Ipsum is simply dumm printing and typesetting</li>
+                                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s</li>
+                                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</li>
+                                    <li>Lorem Ipsum is simply dumm printing and typesetting</li>
+                                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s,.</li>
+                                </ul>
+                                <div class="tabled_widget_footer text-center">
+                                    <a href="#" class="readmore">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+#end
