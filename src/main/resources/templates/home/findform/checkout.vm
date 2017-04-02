@@ -2,6 +2,12 @@
     <label>Checkout</label>
     <div class="has-icon">
         <span class="icon-calendar"></span>
-        <input type="text" class="form-control datepicker" id="dateCheckout" name="" placeholder="dd/mm/yy" required>
+        <input type="text"
+               class="form-control datepicker"
+               id="dateCheckout"
+               name="checkout"
+               placeholder="dd/mm/yy"
+               required
+               value="$!checkout[0]">
     </div>
 </div>

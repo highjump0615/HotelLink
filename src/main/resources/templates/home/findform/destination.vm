@@ -2,7 +2,7 @@
     <label for="destination">$formlabel</label>
     <div class="dropdown dropdown-lang has-icon">
         <span class="icon-pushpin"></span>
-        <input type="text" class="form-control" name="destination" placeholder="City or Destinations" required>
+        <input type="text" class="form-control" name="destination" placeholder="City or Destinations" required value="$!destination[0]">
         <!-- Destination dropdown menu -->
         <div class="dropdown-menu">
             <ul id="destination-menu">

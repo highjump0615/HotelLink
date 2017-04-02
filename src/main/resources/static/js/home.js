@@ -131,7 +131,7 @@ function updateChildRow() {
     for (var i = 0; i < gnChildCount; i++) {
         var strSelect = '<div class="col-sm-4"><div class="form-group">' +
             '<label>Child ' + (i + 1) + ' Age</label>' +
-            '<select class="selector" style="width:100%;">' +
+            '<select class="selector" name="childage" style="width:100%;">' +
             '   <option value="1">1</option>' +
             '   <option value="2">2</option>' +
             '   <option value="3">3</option>' +
@@ -181,12 +181,6 @@ $(document).ready(function(){
         });
         domFlag.addClass('flag-icon-' + nationality.countryId);
     });
-
-    // room info
-    updateRoomInfo();
-
-    // child select
-    updateChildRow();
 
     /**
      * Initialize Date picker
@@ -283,7 +277,4 @@ $('#childcount-select').on('change', function () {
  * form submit
  */
 $('#findhotel-form').submit(function () {
-
-    // prevent default action
-    return false;
 });

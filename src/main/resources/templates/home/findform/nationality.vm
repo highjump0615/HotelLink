@@ -2,7 +2,12 @@
     <label>Nationality</label>
     <div class="dropdown dropdown-lang has-selector">
         <span class="lang-en lang-active flag-icon flag-icon-cn"></span>
-        <input type="text" class="form-control dropdown-toggle" name="nationality" placeholder="China" required>
+        <input type="text"
+               class="form-control dropdown-toggle"
+               name="nationality"
+               placeholder="China"
+               required
+               value="$!nationality[0]">
         <!-- Nationality dropdown menu -->
         <div class="dropdown-menu">
             <ul id="nationality-menu">

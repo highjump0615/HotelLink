@@ -21,7 +21,7 @@
             <h1>Welcome to Our Hotereverlink agencies</h1>
             <h3>Provide Hotel Booking Service for Travel Agencies</h3>
             <div class="form-search">
-                <form id="findhotel-form" method="post" action="">
+                <form id="findhotel-form" method="get" action="/hotel/search">
                     <div class="row gutter7">
                         <div class="col-md-8">
                             <!-- destination form -->

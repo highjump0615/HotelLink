@@ -2,7 +2,13 @@
     <label>Checkin</label>
     <div class="has-icon">
         <span class="icon-calendar"></span>
-        <input type="text" class="form-control datepicker" id="dateCheckin" name="" placeholder="dd/mm/yy" required>
+        <input type="text"
+               class="form-control datepicker"
+               id="dateCheckin"
+               name="checkin"
+               placeholder="dd/mm/yy"
+               required
+               value="$!checkin[0]">
         <div class="calendardaten"></div>
     </div>
 </div>
