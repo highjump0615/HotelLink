@@ -1,10 +1,13 @@
 package com.highjump.controller;
 
+import com.highjump.model.ExchangeRate;
+import com.highjump.webservice.WebserviceManager;
+import com.highjump.webservice.WebserviceProperties;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
@@ -15,7 +18,14 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("/hotel")
-public class HotelController {
+public class HotelController extends BaseController {
+
+    // key for supplier markup
+    private static String kMarkup = "markup";
+    private static String kExchange = "exchange";
+
+    @Autowired
+    private WebserviceManager apiManager;
 
 //    @RequestMapping("/search")
 //    public String search(@RequestParam("destination") String destination,
@@ -47,6 +57,22 @@ public class HotelController {
         model.put("page", "index");
         // merge all parameters
         model.putAll(request.getParameterMap());
+
+        // get supplier markup
+        Map<String, Double> mapMarkup = (Map<String, Double>) context.getAttribute(kMarkup);
+        if (mapMarkup == null) {
+            // call rest api for fetching supplier markup
+            mapMarkup = apiManager.getSupplierMarkup();
+            context.setAttribute(kMarkup, mapMarkup);
+        }
+
+        // get exchange rate
+        ExchangeRate[] exchangeRates = (ExchangeRate[])context.getAttribute(kExchange);
+        if (exchangeRates == null) {
+            // call rest api for fetching exchange rate
+            exchangeRates = apiManager.getExchangeRate();
+            context.setAttribute(kExchange, exchangeRates);
+        }
 
         return "search";
     }
