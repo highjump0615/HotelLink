@@ -7,12 +7,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ExchangeRate extends BaseModel {
-    protected String fromCurrency;
-    protected String toCurrency;
+    private String fromCurrency;
+    private String toCurrency;
 
     protected double rate;
-    protected Object rateType;
-    protected Date rateTime;
+    private Object rateType;
+    private Date rateTime;
 
     public String getFromCurrency() {
         return fromCurrency;

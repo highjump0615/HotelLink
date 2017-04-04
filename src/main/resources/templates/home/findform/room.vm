@@ -1,16 +1,14 @@
 ## initial room count
 #set ($nRoomCount = 1)
-#set ($nRoomCount = $!roomcount[0])
+#set ($nRoomCount = $!roomcount)
 
 ## initial adult count
 #set ($nAdultCount = 2)
-#set ($nAdultCount = $!adultcnt[0])
+#set ($nAdultCount = $!adultcnt)
 
 ## initial child count
 #set ($nChildCount = 1)
-#if ($!{childcnt})
-    #set ($nChildCount = $nChildCount.parseInt($!childcnt[0]))
-#end
+#set ($nChildCount = $!childcnt)
 
 <div class="form-group">
     <label>Room, Adults (18+), Children (0-12)</label>
@@ -83,11 +81,9 @@
                                 <select class="selector" name="childage" style="width:100%;">
                                     #foreach($j in [1..6])
                                         ## set child age
+                                        #set ($nIndex = $i - 1)
                                         #set ($nChildAge = 6)
-                                        #if ($!{childage})
-                                            #set ($nIndex = $i - 1)
-                                            #set ($nChildAge = $nChildAge.parseInt($!childage[$nIndex]))
-                                        #end
+                                        #set ($nChildAge = $!{childage[$nIndex]})
 
                                         #if ($j == $nChildAge)
                                             <option value="$j" selected>$j</option>

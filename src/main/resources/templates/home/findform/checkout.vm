@@ -8,6 +8,6 @@
                name="checkout"
                placeholder="dd/mm/yy"
                required
-               value="$!checkout[0]">
+               value="$!checkout">
     </div>
 </div>

@@ -1,8 +1,15 @@
 <div class="form-group">
+    <input type="hidden" name="destination" value="$!{destination.getId()}">
+
     <label for="destination">$formlabel</label>
     <div class="dropdown dropdown-lang has-icon">
         <span class="icon-pushpin"></span>
-        <input type="text" class="form-control" name="destination" placeholder="City or Destinations" required value="$!destination[0]">
+        <input type="text"
+               class="form-control"
+               id="destination-input"
+               placeholder="City or Destinations"
+               required
+               value="$!{destination.toString()}">
         <!-- Destination dropdown menu -->
         <div class="dropdown-menu">
             <ul id="destination-menu">
