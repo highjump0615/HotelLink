@@ -2,11 +2,10 @@
 
 #parse("layout/layout.vm")
 
-#@styleLayout()
+#@headLayout()
 <!-- css style -->
 
 #end
-
 
 #@mainLayout()
 
@@ -165,5 +164,10 @@
 
     </div>
 </section>
+
+#end
+
+#@scriptLayout()
+<!-- script -->
 
 #end

@@ -2,7 +2,7 @@
 
 #parse("layout/layout.vm")
 
-#@styleLayout()
+#@headLayout()
 <!-- css style -->
 
 #end
@@ -47,5 +47,10 @@
 
     </div>
 </section>
+
+#end
+
+#@scriptLayout()
+<!-- script -->
 
 #end

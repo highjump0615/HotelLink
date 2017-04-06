@@ -2,7 +2,7 @@
 
 #parse("layout/layout_login.vm")
 
-#@styleLayout()
+#@headLayout()
 <!-- css style -->
 
 <link href="css/page/homefind.css" rel="stylesheet" type="text/css">
