@@ -93,7 +93,7 @@ $('#nationality-input').keyup(function () {
 
                 // add to list
                 var strLi = '<li>' +
-                    '<span class="flag-icon flag-icon-' + nationality.countryId + '"></span>'
+                    '<span class="flag-icon flag-icon-' + nationality.countryId.toLowerCase() + '"></span>'
                     + nationality.countryName +
                     '</li>';
 
@@ -181,7 +181,7 @@ $(document).ready(function(){
                 domFlag.removeClass(item);
             }
         });
-        domFlag.addClass('flag-icon-' + nationality.countryId);
+        domFlag.addClass('flag-icon-' + nationality.countryId.toLowerCase());
     });
 
     /**

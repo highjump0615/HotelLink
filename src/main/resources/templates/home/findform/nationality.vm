@@ -1,6 +1,6 @@
 ## init nationality country id
 #set ($strCountryId = "cn")
-#set ($strCountryId = $!{nationality.getCountryId()})
+#set ($strCountryId = $!{nationality.getCountryId().toLowerCase()})
 
 <div class="form-group">
     <input type="hidden" name="nationality" value="$!{nationality.getId()}">
