@@ -1,5 +1,6 @@
 package com.highjump.model;
 
+import com.highjump.common.CommonUtils;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -306,6 +307,6 @@ public class Hotel extends BaseModel {
      * Get Url of picture
      */
     public String getPictureUrl() {
-        return "http://mogux.b0.upaiyun.com" + pictureId;
+        return CommonUtils.getPicBaseUrl() + pictureId;
     }
 }
