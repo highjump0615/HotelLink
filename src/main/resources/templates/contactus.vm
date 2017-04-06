@@ -2,7 +2,7 @@
 
 #parse("layout/layout.vm")
 
-#@styleLayout()
+#@headLayout()
 <!-- css style -->
 
 #end
@@ -116,5 +116,10 @@
     <div id="map_canvas"></div>
 </section>
 -->
+
+#end
+
+#@scriptLayout()
+<!-- script -->
 
 #end

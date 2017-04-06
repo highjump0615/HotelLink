@@ -2,6 +2,11 @@
 
 #parse("layout/layout.vm")
 
+#@headLayout()
+<!-- css style -->
+
+#end
+
 #@mainLayout()
 
 <section class="page-heading">
@@ -159,5 +164,10 @@
 
     </div>
 </section>
+
+#end
+
+#@scriptLayout()
+<!-- script -->
 
 #end

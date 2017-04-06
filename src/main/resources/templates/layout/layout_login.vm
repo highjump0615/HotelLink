@@ -1,21 +1,22 @@
-#macro(mainLayout)
+#macro(headLayout)
 
 <!DOCTYPE html>
 <html lang="en-gb">
 
 <head>
 
-#macro(styleLayout)
     #parse("layout/head.vm")
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
 
     $!bodyContent
-#end
 
 </head>
 
+#end
+
+#macro(mainLayout)
 
 <body>
 
@@ -88,11 +89,12 @@
 
     #parse("layout/footer.vm")
 
+#end
+
 #macro(scriptLayout)
     #parse("layout/script.vm")
 
     $!bodyContent
-#end
 
 </body>
 </html>
