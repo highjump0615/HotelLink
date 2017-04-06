@@ -125,9 +125,19 @@ public class HotelController extends BaseController {
         // request
         JSONObject jsonParam = new JSONObject();
         JSONObject jsonRequest = new JSONObject();
+
+        // todo - test, delete it
+//        jsonRequest.put("countryId", "TH");
+//        jsonRequest.put("cityId", 47521);
+
         if (destination != null) {
             jsonRequest.put("countryId", destination.getCountryId());
             jsonRequest.put("cityId", destination.getCityId());
+
+            // if hotel, add hotel parameter
+            if (destination.getType().equals("hotel")) {
+                jsonRequest.put("hotelId", destination.getHotelId());
+            }
         }
 
         // date convert
@@ -165,6 +175,9 @@ public class HotelController extends BaseController {
             jsonRooms.add(jsonRoom);
         }
         jsonRequest.put("rooms", jsonRooms);
+
+        // todo - test, delete it
+//        jsonRequest.put("nationality", "CN");
 
         if (nationality != null) {
             jsonRequest.put("nationality", nationality.getCountryId());

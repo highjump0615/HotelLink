@@ -1,5 +1,8 @@
 package com.highjump.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Hotel extends BaseModel {
     private String hotelId;
     private String hotelName;
@@ -73,6 +76,18 @@ public class Hotel extends BaseModel {
 
     public int getStarRating() {
         return starRating;
+    }
+
+    /**
+     * Star Count
+     * 1: 10, 5: 50
+     * @return int 1~5
+     */
+    public int getStarRatingSimple() {
+        double dRate = starRating / 50.0;
+        int nVal = (int) Math.round(dRate * 5);
+
+        return nVal;
     }
 
     public void setStarRating(int starRating) {
@@ -285,5 +300,12 @@ public class Hotel extends BaseModel {
 
     public void setPictures(String[] pictures) {
         this.pictures = pictures;
+    }
+
+    /**
+     * Get Url of picture
+     */
+    public String getPictureUrl() {
+        return "http://mogux.b0.upaiyun.com" + pictureId;
     }
 }

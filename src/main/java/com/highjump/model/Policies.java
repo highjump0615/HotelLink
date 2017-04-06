@@ -64,4 +64,18 @@ public class Policies {
     public void setPolicies(String policies) {
         this.policies = policies;
     }
+
+    /**
+     * get policies description
+     * @return
+     */
+    public String getDescription() {
+        String strResult = "Non-refundable";
+
+        if ("true".equalsIgnoreCase(refundable)) {
+            strResult = "Refundable";
+        }
+
+        return strResult;
+    }
 }

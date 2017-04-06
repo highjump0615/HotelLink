@@ -16,7 +16,7 @@
 <section class="page-heading">
     <div class="container">
         <div class="form-search">
-            <form id="findhotel-form" method="post" action="">
+            <form id="findhotel-form" method="get" action="/hotel/search">
                 <div class="row gutter5">
                     <div class="col-md-3">
                         <!-- destination form -->
@@ -133,21 +133,23 @@
                     </li>
                 </ul>
 
+                ## Hotel Availabilities
                 <ul class="items">
-                    #foreach($i in [0..5])
+                    #foreach($hotelAblty in $hotelAvailabilities)
                     <li class="item clearfix">
+                        #set ($hotel = $hotelAblty.getHotel())
                         <figure>
-                            <a href="/hotel/detail/238"><img src="images/temp/temp_hotel001_310x235.jpg" alt=""></a>
+                            <a href="/hotel/detail/238"><img src="${hotel.getPictureUrl()}" alt=""></a>
                         </figure>
                         <hgroup>
                             <div class="item-header">
                                 <div class="item-header-title">
                                     <div class="item-header-rates">
                                         <div class="item-header-score">Excellent 8.6</div>
-                                        <div class="item-header-reviews">2,339 reviews</div>
+                                        <div class="item-header-reviews">${hotel.getReviews()} reviews</div>
                                     </div>
-                                    Valarmathi Kongunaatu Samayal
-                                    <div class="rate"><span class="rate5"></span></div>
+                                    ${hotel.getHotelName()}
+                                    <div class="rate"><span class="rate${hotel.getStarRatingSimple()}"></span></div>
                                 </div>
                                 <!--<div class="item-header-meta">Distance to Bejing station Museum is 45km(41mi) </div>-->
                             </div>
@@ -159,20 +161,32 @@
                                     <div class="item-option-price">Price</div>
                                     <div class="item-option-action"></div>
                                 </div>
+                                ## availabilities
+                                #set ($i = 0)
+                                #foreach($availability in ${hotelAblty.getAvailabilities()})
+                                #set($hotelRooms = ${availability.getHotelRooms()})
                                 <div class="item-option">
                                     <div class="item-option-roomtype">
-                                        <div class="roomtype-name">Double Room x2</div>
-                                        <div class="roomtype-name">Double Room + Twin Room</div>
+                                        #foreach($rms in ${hotelRooms.getRooms()})
+                                        <div class="roomtype-name">${rms.getRoomName()} x${rms.getRoomCount()}</div>
+                                        #end
                                     </div>
-                                    <div class="item-option-breakfast">Available</div>
-                                    <div class="item-option-policy"><a href="#">View Policy</a> <span class="ico ico-question-circle" data-toggle="tooltip" title="Policy information goes here..."></span></div>
+                                    <div class="item-option-breakfast">$!{hotelRooms.getMeal().getBreakfastDesc()}</div>
+                                    ## Policies
+                                    <div class="item-option-policy">
+                                        <a href="#">${hotelRooms.getPolicies().getDescription()}</a>
+                                        <span class="ico ico-question-circle"
+                                              data-toggle="tooltip"
+                                              title="Policy information goes here...">
+                                        </span>
+                                    </div>
                                     <div class="item-option-price">
                                         <div class="price-discount">
-                                            <div class="price-discount-percentage">46%</div>
-                                            <div class="price-discount-amount">$25,962</div>
+                                            <div class="price-discount-percentage">${hotelRooms.getDiscountPercent()}%</div>
+                                            <div class="price-discount-amount">$${hotelRooms.getTotalOriginalRate()}</div>
                                         </div>
                                         <div class="price-amount">
-                                            <div class="price-amount-value">$567.75 <span class="ico ico-question-circle" data-toggle="tooltip" title="Price information goes here..."></span></div>
+                                            <div class="price-amount-value">$${hotelRooms.getTotalRate()} <span class="ico ico-question-circle" data-toggle="tooltip" title="Price information goes here..."></span></div>
                                             <div class="price-amount-notes">Total price(incl. tax)</div>
                                         </div>
                                     </div>
@@ -180,26 +194,13 @@
                                         <a href="#" class="booknow">BOOK NOW<span class="ico ico-arrow-right-sm"></span></a>
                                     </div>
                                 </div>
-                                <div class="item-option">
-                                    <div class="item-option-roomtype">
-                                        <div class="roomtype-name">Superior Room</div>
-                                    </div>
-                                    <div class="item-option-breakfast">Available</div>
-                                    <div class="item-option-policy"><a href="#">View Policy</a> <span class="ico ico-question-circle" data-toggle="tooltip" title="Policy information goes here..."></span></div>
-                                    <div class="item-option-price">
-                                        <div class="price-discount">
-                                            <div class="price-discount-percentage">46%</div>
-                                            <div class="price-discount-amount">$25,962</div>
-                                        </div>
-                                        <div class="price-amount">
-                                            <div class="price-amount-value">$567.75 <span class="ico ico-question-circle" data-toggle="tooltip" title="Price information goes here..."></span></div>
-                                            <div class="price-amount-notes">Total price(incl. tax)</div>
-                                        </div>
-                                    </div>
-                                    <div class="item-option-action">
-                                        <a href="#" class="booknow">BOOK NOW<span class="ico ico-arrow-right-sm"></span></a>
-                                    </div>
-                                </div>
+
+                                    ## only show 2 availabilties
+                                    #set($i = $i+1)
+                                    #if ($i >= 2)
+                                        #break
+                                    #end
+                                #end
                             </div>
                             <div class="item-footer">
                                 <a href="#" class="seeall">SEE ALL ROOM OPTIONS</a>

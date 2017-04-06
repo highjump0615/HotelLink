@@ -35,6 +35,17 @@ public class HotelRoom extends BaseModel {
         this.totalRate = totalRate;
     }
 
+    /**
+     * Calculate Discount Percentage
+     * @return int
+     */
+    public int getDiscountPercent() {
+        int nRes = 0;
+        nRes = (int) Math.round((totalOriginalRate - totalRate) / totalOriginalRate * 100);
+
+        return nRes;
+    }
+
     public double getTotalOriginalRate() {
         return totalOriginalRate;
     }

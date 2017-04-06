@@ -46,4 +46,18 @@ public class Meal {
     public void setBreakfastDescription(String breakfastDescription) {
         this.breakfastDescription = breakfastDescription;
     }
+
+    /**
+     * get breakfast description
+     * @return String
+     */
+    public String getBreakfastDesc() {
+        String strResult = breakfastDescription;
+
+        if (strResult == null || strResult.isEmpty()) {
+            strResult = mealDescription;
+        }
+
+        return strResult;
+    }
 }
