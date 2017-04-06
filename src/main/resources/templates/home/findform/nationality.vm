@@ -1,13 +1,19 @@
+## init nationality country id
+#set ($strCountryId = "cn")
+#set ($strCountryId = $!{nationality.getCountryId()})
+
 <div class="form-group">
+    <input type="hidden" name="nationality" value="$!{nationality.getId()}">
+
     <label>Nationality</label>
     <div class="dropdown dropdown-lang has-selector">
-        <span class="lang-en lang-active flag-icon flag-icon-cn"></span>
+        <span class="lang-en lang-active flag-icon flag-icon-${strCountryId}"></span>
         <input type="text"
                class="form-control dropdown-toggle"
-               name="nationality"
+               id="nationality-input"
                placeholder="China"
                required
-               value="$!nationality[0]">
+               value="$!{nationality.getCountryName()}">
         <!-- Nationality dropdown menu -->
         <div class="dropdown-menu">
             <ul id="nationality-menu">

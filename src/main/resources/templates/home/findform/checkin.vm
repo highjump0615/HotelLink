@@ -8,7 +8,7 @@
                name="checkin"
                placeholder="dd/mm/yy"
                required
-               value="$!checkin[0]">
+               value="$!checkin">
         <div class="calendardaten"></div>
     </div>
 </div>

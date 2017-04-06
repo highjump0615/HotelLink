@@ -6,10 +6,7 @@ var gdomDestinationMenu;
 var gdomNationalityMenu;
 
 var garyNationality = [];
-var gnNationalityIndex;
-
 var garyDestination = [];
-var gnDestinationIndex;
 
 var gnRoomCount = 1;
 var gnAdultCount = 2;
@@ -18,7 +15,7 @@ var gnChildCount = 1;
 /**
  * Key up on city field
  */
-$('input[name="destination"]').keyup(function () {
+$('#destination-input').keyup(function () {
     var strKeyword = $(this).val();
     var menuDropdown = $(this).next();
 
@@ -32,7 +29,7 @@ $('input[name="destination"]').keyup(function () {
     //
     $.ajax({
         type: "GET",
-        url: API_URL + 'suggestion/destination?key=' + strKeyword,
+        url: API_URL_LOCAL + 'suggestion/destination?key=' + strKeyword,
         dataType: 'json',
         crossDomain: true,
         success: function (data) {
@@ -63,7 +60,7 @@ $('input[name="destination"]').keyup(function () {
 /**
  * Key up on nationality field
  */
-$('input[name="nationality"]').keyup(function () {
+$('#nationality-input').keyup(function () {
     var strKeyword = $(this).val();
     var menuDropdown = $(this).next();
 
@@ -79,7 +76,7 @@ $('input[name="nationality"]').keyup(function () {
     //
     $.ajax({
         type: "GET",
-        url: API_URL + 'suggestion/nationality?key=' + strKeyword,
+        url: API_URL_LOCAL + 'suggestion/nationality?key=' + strKeyword,
         dataType: 'json',
         crossDomain: true,
         success: function (data) {
@@ -155,20 +152,25 @@ $(document).ready(function(){
     // init
     gdomDestinationMenu = $('#destination-menu');
     gdomDestinationMenu.on('click', 'li', function () {
-        gnDestinationIndex = $(this).index();
+        var destination = garyDestination[$(this).index()];
+
+        // set selected id
+        $('input[name="destination"]').val(destination.id);
 
         // Set selected destination
-        $('input[name="destination"]').val($(this).html());
+        $('#destination-input').val($(this).html());
     });
 
     gdomNationalityMenu = $('#nationality-menu');
     gdomNationalityMenu.on('click', 'li', function () {
-        gnNationalityIndex = $(this).index();
-        var nationality = garyNationality[gnNationalityIndex];
+        var nationality = garyNationality[$(this).index()];
 
         // Set selected nationality
-        var domInput = $('input[name="nationality"]');
+        var domInput = $('#nationality-input');
         domInput.val(nationality.countryName);
+
+        // set selected id
+        $('input[name="nationality"]').val(nationality.id);
 
         // set flag
         var domFlag = domInput.prev();
