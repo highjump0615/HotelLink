@@ -135,7 +135,7 @@ public class HotelController extends BaseController {
             jsonRequest.put("cityId", destination.getCityId());
 
             // if hotel, add hotel parameter
-            if (destination.getType().equals("hotel")) {
+            if (destination.isHotel()) {
                 jsonRequest.put("hotelId", destination.getHotelId());
             }
         }
@@ -233,7 +233,7 @@ public class HotelController extends BaseController {
         jsonParam.put("limit", jsonLimit);
 
         // call availabilty web service
-        HotelAvailability[] hotelAvailabilities = apiManager.getCityAvailability(jsonParam);
+        HotelAvailability[] hotelAvailabilities = apiManager.getCityAvailability(jsonParam, (destination != null && destination.isHotel()));
 
 
         //
