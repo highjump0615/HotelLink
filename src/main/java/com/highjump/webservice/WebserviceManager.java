@@ -70,18 +70,29 @@ public class WebserviceManager {
     /**
      * fetch hotel availabilities
      * @param param json
+     * @param isHotel true if destination is hotel
      * @return
      */
-    public HotelAvailability[] getCityAvailability(JSONObject param) {
+    public HotelAvailability[] getCityAvailability(JSONObject param, boolean isHotel) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
 
         HttpEntity<String> entity = new HttpEntity<String>(param.toString(), headers);
 
-        ResponseEntity<JSONObject> response = restTemplate.exchange(svcProperty.getRootUrl() + "/hotel/availability/city", HttpMethod.POST, entity, JSONObject.class);
+        // determine url
+        String strUrl = "/hotel/availability/city";
+        if (isHotel) {
+            strUrl = "/hotel/availability/hotel";
+        }
+
+        // call available web service
+        ResponseEntity<JSONObject> response = restTemplate.exchange(svcProperty.getRootUrl() + strUrl, HttpMethod.POST, entity, JSONObject.class);
         JSONObject jsonResponse = response.getBody();
         JSONArray jsonArray = jsonResponse.getJSONArray("hotelAvailabilities");;
 
+        //
+        // transfer json to object
+        //
         HotelAvailability[] hotelAvailabilities = null;
         ObjectMapper mapper = new ObjectMapper();
 
