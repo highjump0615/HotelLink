@@ -26,6 +26,11 @@ Backend data web service is totally separated from this main web page, and not i
 - [Json Lib 2.4](http://mvnrepository.com/artifact/net.sf.json-lib/json-lib/2.4) is used for transferring object into JSON
 - [Jackson Databind 2.6.7](https://github.com/FasterXML/jackson-databind/) is used for transferring JSON into object
 
+#### 2.2 Frontend Development (Bootstrap v3.3.4)
+- [jQuery Select2 Plugin](https://github.com/select2/select2/) for selecting items with input
+- [jQuery Date picker v5.1.1](https://github.com/kbwood/datepick) for selecting date
+- [BxSlider 4.1.2](https://github.com/stevenwanderski/bxslider-4) for Carousel Slider
+
 ## Need to Improve
 - Complete the features not implemented  
 ... ...
